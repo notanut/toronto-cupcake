@@ -80,5 +80,36 @@ html {
 
 main {
     background: linear-gradient(to bottom, #FFE9F0, #DFD9FF);
-    height: 100vh;
+    height: 100%;
+    
+  }
+  
+main form {
+  display: flex;
+
+}
+
+.left {
+  width: calc(100% - 320px);
+}
+
+.right {
+  width: 300px;
+}
+
+.orders{
+  background-color: white;
+}
+
+.order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.order img {
+  width: 7.5vw;
+  height: 8.5vw;
+  border-radius: 15px;
 }
