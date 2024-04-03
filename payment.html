@@ -80,28 +80,28 @@
                             <button id="card" class="pay-btn" onclick="toggleActive(this, 'payment-others')">Others</button>
                         </div>
                         <div class="payment" id="payment-recent">
-                            <button class="pay">
+                            <button class="pay" id="bcaButton">
                                 <input type="radio" name="payment-method">
                                 <div class="img-pay">
                                     <img src="./assets/payment/bank-central-asia-logo-bank-central-asia-bca-format-cdr-png-gudril-1.png" alt="logo bca">
                                 </div>
                                 <span>BCA Virtual Account</span>
                             </button>
-                            <button class="pay">
+                            <button class="pay" id="briButton">
                                 <input type="radio" name="payment-method">
                                 <div class="img-pay">
                                     <img src="./assets/payment/105-1051729_bank-negara-indonesia-logo-bank-bni-transparan-clipart.png" alt="logo bri">
                                 </div>
                                 <span>BRI Virtual Account</span>
                             </button>
-                            <button class="pay">
+                            <button class="pay" id="gopayButton">
                                 <input type="radio" name="payment-method">
                                 <div class="img-pay">
                                     <img src="./assets/payment/gopay.png" alt="logo gopay">
                                 </div>
                                 <span>GoPay</span>
                             </button>
-                            <button class="pay">
+                            <button class="pay" id="kredivoButton">
                                 <input type="radio" name="payment-method">
                                 <div class="img-pay">
                                     <img src="./assets/payment/Logo Kredivo.png" alt="logo kredivo">
@@ -111,28 +111,28 @@
                         </div>
                         
                         <div class="payment none" id="payment-ewallet">
-                            <button class="pay">
+                            <button class="pay" id="gpayButton">
                                 <input type="radio" name="payment-method">
                                 <div class="img-pay">
                                     <img src="./assets/payment/gopay.png" alt="logo gopay">
                                 </div>
                                 <span>GoPay</span>
                             </button>
-                            <button class="pay">
+                            <button class="pay" id="ovoButton">
                                 <input type="radio" name="payment-method">
                                 <div class="img-pay">
                                     <img src="./assets/payment/OVO.png" alt="logo ovo">
                                 </div>
                                 <span>OVO</span>
                             </button>
-                            <button class="pay">
+                            <button class="pay" id="danaButton">
                                 <input type="radio" name="payment-method">
                                 <div class="img-pay">
                                     <img src="./assets/payment/Dana.png" alt="logo dana">
                                 </div>
                                 <span>Dana</span>
                             </button>
-                            <button class="pay">
+                            <button class="pay" id="shopeePayButton">
                                 <input type="radio" name="payment-method">
                                 <div class="img-pay">
                                     <img src="./assets/payment/shopeepay-logo-1762x350.png" alt="logo shopeepay">
@@ -164,9 +164,11 @@
                                     <label for="card-expired">
                                         Valid Until: 
                                     </label>
-                                    <input type="text" id="card-month" placeholder="MM" required>
-                                    <span>/</span>
-                                    <input type="text" id="card-year" placeholder="YY" required>
+                                    <div class="expired-wrapper">
+                                        <input type="text" id="card-month" placeholder="MM" required>
+                                        <span> / </span>
+                                        <input type="text" id="card-year" placeholder="YY" required>
+                                    </div>
                                 </div>
                                 <div class="card-cvv">
                                     <label for="card-cvv">
@@ -176,96 +178,98 @@
                                 </div>
                             </div>
                         </div>
+                        
+                        <div class="payment none" id="payment-virtual">
+                            <button class="pay" id="bcavButton">
+                                <input type="radio" name="payment-method">
+                                <div class="img-pay">
+                                    <img src="./assets/payment/bank-central-asia-logo-bank-central-asia-bca-format-cdr-png-gudril-1.png" alt="bca logo">
+                                </div>
+                                <span>BCA Virtual Account</span>
+                            </button>
+        
+                            <button class="pay" id="mandiriButton">
+                                <input type="radio" name="payment-method">
+                                <div class="img-pay">
+                                    <img src="./assets/payment/p-2813-2-bank-mandiri-logo-png-transparent-logo-699390155888.png" alt="mandiri logo">
+                                </div>
+                                <span>Mandiri Virtual Account</span>
+                            </button>
+        
+                            <button class="pay" id="bniButton">
+                                <input type="radio" name="payment-method">
+                                <div class="img-pay">
+                                    <img src="./assets/payment/105-1051729_bank-negara-indonesia-logo-bank-bni-transparan-clipart.png" alt="bni logo">
+                                </div>
+                                <span>BNI Virtual Account</span>
+                            </button>
+        
+                            <button class="pay" id="brivButton">
+                                <input type="radio" name="payment-method">
+                                <div class="img-pay">
+                                    <img src="./assets/payment/bri-logo-freelogovectors.net_.png" alt="bri logo">
+                                </div>
+                                <span>BRI Virtual Account</span>
+                            </button>
+                        </div>
+        
+                        <div class="payment none" id="payment-others">
+                            <button class="pay" id="alfaButton">
+                                <input type="radio" name="payment-method">
+                                <div class="img-pay">
+                                    <img src="./assets/payment/Alfamart-logo-1536x864.png" alt="alfamart logo">
+                                </div>
+                                <span>Alfamart</span>
+                            </button>
+                            <button class="pay" id="indoButton">
+                                <input type="radio" name="payment-method">
+                                <div class="img-pay">
+                                    <img src="./assets/payment/indomaret-1024x538.png" alt="indomaret logo">
+                                </div>
+                                <span>Indomaret</span>
+                            </button>
+                            <button class="pay" id="krediButton">
+                                <input type="radio" name="payment-method">
+                                <div class="img-pay">
+                                    <img src="./assets/payment/Logo Kredivo.png" alt="kredivo logo">
+                                </div>
+                                <span>Kredivo</span>
+                            </button>
+                            <button class="pay" id="atomeButton">
+                                <input type="radio" name="payment-method">
+                                <div class="img-pay">
+                                    <img src="./assets/payment/ic-gettheapp-logo@2x.png" alt="atome logo">
+                                </div>
+                                <span>Atome</span>
+                            </button>
+                        </div>
                     </div>
-    
-                    <div class="payment none" id="payment-virtual">
-                        <button class="pay">
-                            <input type="radio" name="payment-method">
-                            <div class="img-pay">
-                                <img src="./assets/payment/bank-central-asia-logo-bank-central-asia-bca-format-cdr-png-gudril-1.png" alt="bca logo">
+            </section>
+            <section class="right">
+                <div class="order-summary">
+                    <h2>Order Summary</h2>
+                    <div class="sub-wrapper">
+                        <div class="sub">
+                            <span class="sub-title">Subtotal</span>
+                            <span class="sub-price">$10.00</span>
+                        </div>
+                        <div class="sub">
+                            <span class="sub-title">Shipping Cost</span>
+                            <span class="sub-price">$3.00</span>
+                        </div>
+                        <div class="sub">
+                            <span class="sub-title">Tax</span>
+                            <span class="sub-price">$1.00</span>
+                        </div>
+            
+                        <div class="total">
+                            <div class="total-wrap">
+                                <span class="title">Total</span>
+                                <span class="price">$14.00</span>
                             </div>
-                            <span>BCA Virtual Account</span>
-                        </button>
-    
-                        <button class="pay">
-                            <input type="radio" name="payment-method">
-                            <div class="img-pay">
-                                <img src="./assets/payment/p-2813-2-bank-mandiri-logo-png-transparent-logo-699390155888.png" alt="mandiri logo">
-                            </div>
-                            <span>Mandiri Virtual Account</span>
-                        </button>
-    
-                        <button class="pay">
-                            <input type="radio" name="payment-method">
-                            <div class="img-pay">
-                                <img src="./assets/payment/105-1051729_bank-negara-indonesia-logo-bank-bni-transparan-clipart.png" alt="bni logo">
-                            </div>
-                            <span>BNI Virtual Account</span>
-                        </button>
-    
-                        <button class="pay">
-                            <input type="radio" name="payment-method">
-                            <div class="img-pay">
-                                <img src="./assets/payment/bri-logo-freelogovectors.net_.png" alt="bri logo">
-                            </div>
-                            <span>BRI Virtual Account</span>
-                        </button>
+                            <button class="submit">place order</button>
+                        </div>
                     </div>
-    
-                    <div class="payment none" id="payment-others">
-                        <button class="pay">
-                            <input type="radio" name="payment-method">
-                            <div class="img-pay">
-                                <img src="./assets/payment/Alfamart-logo-1536x864.png" alt="alfamart logo">
-                            </div>
-                            <span>Alfamart</span>
-                        </button>
-                        <button class="pay">
-                            <input type="radio" name="payment-method">
-                            <div class="img-pay">
-                                <img src="./assets/payment/indomaret-1024x538.png" alt="indomaret logo">
-                            </div>
-                            <span>Indomaret</span>
-                        </button>
-                        <button class="pay">
-                            <input type="radio" name="payment-method">
-                            <div class="img-pay">
-                                <img src="./assets/payment/Logo Kredivo.png" alt="kredivo logo">
-                            </div>
-                            <span>Kredivo</span>
-                        </button>
-                        <button class="pay">
-                            <input type="radio" name="payment-method">
-                            <div class="img-pay">
-                                <img src="./assets/payment/ic-gettheapp-logo@2x.png" alt="atome logo">
-                            </div>
-                            <span>Atome</span>
-                        </button>
-                    </div>
-                </div>
-        </section>
-        <section class="right">
-            <div class="order-summary">
-                <h2>Order Summary</h2>
-                <div class="sub">
-                    <span class="sub-title">Subtotal</span>
-                    <span class="sub-price">$10.00</span>
-                </div>
-                <div class="sub">
-                    <span class="sub-title">Shipping Cost</span>
-                    <span class="sub-price">$3.00</span>
-                </div>
-                <div class="sub">
-                    <span class="sub-title">Tax</span>
-                    <span class="sub-price">$1.00</span>
-                </div>
-    
-                <div class="total">
-                    <div class="total-wrap">
-                        <span class="title">Total</span>
-                        <span class="price">$14.00</span>
-                    </div>
-                    <button class="submit">place order</button>
                 </div>
             </div>
         </section>
