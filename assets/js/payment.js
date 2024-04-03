@@ -100,3 +100,56 @@ function handleRadioButton(button) {
 
     // Check the associated radio button
 }
+
+document.getElementById('name').addEventListener('blur', () => {
+    validateName()
+})
+document.getElementById('phone').addEventListener('blur', () => {
+    validatePhone()
+})
+document.getElementById('address').addEventListener('blur', () => {
+    validateAddress()
+})
+
+// document.getElementById('phone').addEventListener('input', () => {
+//     this.value = this.value.replace(/\D/g, '');
+// })
+
+function validateName() {
+    var name = document.getElementById('name').value
+    var nameError = document.getElementById('nameError')
+
+    if (!name) {
+        nameError.textContent = 'Name is required'
+    } else if (name.length < 5) {
+        nameError.textContent = 'Name must be at least 5 characters'
+    } else {
+        nameError.textContent = ''
+    }
+}
+
+function validatePhone() {
+    var phone = document.getElementById('phone').value
+    var phoneError = document.getElementById('phoneError')
+
+    if (!phone) {
+        phoneError.textContent = 'Phone number is required'
+    } else if (!/^\d{10,12}$/.test(phone)) {
+        phoneError.textContent = 'Phone number must be between 10 or 12 digits long'
+    } else [
+        phoneError.textContent = '',
+    ]
+}
+
+function validateAddress() {
+    var addr = document.getElementById('address').value
+    var addrError = document.getElementById('addrError')
+
+    if (!addr) {
+        addrError.textContent = 'Address is required'
+    } else if (addr.length < 10) {
+        addrError.textContent = 'Address must be at least 10 characters'
+    } else {
+        addrError.textContent = ''
+    }
+}

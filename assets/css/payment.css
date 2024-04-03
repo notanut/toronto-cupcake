@@ -296,7 +296,8 @@ main form {
 .allowed {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
+  gap: 1.5rem;
   width: 100%;
   flex-wrap: wrap;
 }
@@ -362,3 +363,17 @@ main form {
   color: #f384a7;
 }
 
+@media screen and (max-width: 980px) {
+  main form {
+    flex-direction: column;
+
+  }
+}
+
+.error-message {
+  height: .5rem;
+  color: red;
+  font-size: .75rem;
+  margin-top: 5px;
+  font-weight: 300;
+}

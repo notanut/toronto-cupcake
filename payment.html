@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/payment.css">
-    <script defer src="./js/payment.js"></script>
+    <link rel="stylesheet" href="./assets/css/payment.css">
+    <script defer src="./assets/js/payment.js"></script>
     <title>Checkout</title>
 </head>
 <body>
@@ -17,7 +17,7 @@
                 <div class="order">
                     <div class="order-wrapper">
                         <div class="img-container">
-                            <img src="./assets/payment/luisana-zerpa-MJPr6nOdppw-unsplash.jpg" alt="cupcake" class="order-img">
+                            <img src="./assets/img/payment/luisana-zerpa-MJPr6nOdppw-unsplash.jpg" alt="cupcake" class="order-img">
                         </div>
                         <div class="order-info-wrapper">
                             <p class="order-name">Redvelvet Cupcake</p>
@@ -31,7 +31,7 @@
                 <div class="order">
                     <div class="order-wrapper">
                         <div class="img-container">
-                            <img src="./assets/payment/sara-cervera-FAnSK-gVGZU-unsplash.jpg" alt="cupcake" class="order-img">
+                            <img src="./assets/img/payment/sara-cervera-FAnSK-gVGZU-unsplash.jpg" alt="cupcake" class="order-img">
                         </div>
                         <div class="order-info-wrapper">
                             <p class="order-name">Rainbow Cupcake</p>
@@ -51,13 +51,15 @@
                                 Name:
                             </label>
                             <input type="text" id="name" placeholder="Enter name" required>
+                            <p class="error-message" id="nameError"></p>
                         </div>
         
                         <div class="input-number">
                             <label for="phone">
                                 Phone Number:
                             </label>
-                            <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter phone number (number only)" required>
+                            <p class="error-message" id="phoneError"></p>
                         </div>
                     </div>
     
@@ -66,6 +68,7 @@
                             Address:
                         </label>
                         <textarea name="address" id="address" cols="20" rows="3" placeholder="Enter address"></textarea>
+                        <p class="error-message" id="addrError"></p>
                     </div>
                 </div>
     
@@ -83,28 +86,28 @@
                             <button class="pay" id="bcaButton">
                                 <input type="radio" name="payment-method">
                                 <div class="img-pay">
-                                    <img src="./assets/payment/bank-central-asia-logo-bank-central-asia-bca-format-cdr-png-gudril-1.png" alt="logo bca">
+                                    <img src="./assets/img/payment/bank-central-asia-logo-bank-central-asia-bca-format-cdr-png-gudril-1.png" alt="logo bca">
                                 </div>
                                 <span>BCA Virtual Account</span>
                             </button>
                             <button class="pay" id="briButton">
                                 <input type="radio" name="payment-method">
                                 <div class="img-pay">
-                                    <img src="./assets/payment/105-1051729_bank-negara-indonesia-logo-bank-bni-transparan-clipart.png" alt="logo bri">
+                                    <img src="./assets/img/payment/105-1051729_bank-negara-indonesia-logo-bank-bni-transparan-clipart.png" alt="logo bri">
                                 </div>
                                 <span>BRI Virtual Account</span>
                             </button>
                             <button class="pay" id="gopayButton">
                                 <input type="radio" name="payment-method">
                                 <div class="img-pay">
-                                    <img src="./assets/payment/gopay.png" alt="logo gopay">
+                                    <img src="./assets/img/payment/gopay.png" alt="logo gopay">
                                 </div>
                                 <span>GoPay</span>
                             </button>
                             <button class="pay" id="kredivoButton">
                                 <input type="radio" name="payment-method">
                                 <div class="img-pay">
-                                    <img src="./assets/payment/Logo Kredivo.png" alt="logo kredivo">
+                                    <img src="./assets/img/payment/Logo Kredivo.png" alt="logo kredivo">
                                 </div>
                                 <span>Kredivo</span>
                             </button>
@@ -114,28 +117,28 @@
                             <button class="pay" id="gpayButton">
                                 <input type="radio" name="payment-method">
                                 <div class="img-pay">
-                                    <img src="./assets/payment/gopay.png" alt="logo gopay">
+                                    <img src="./assets/img/payment/gopay.png" alt="logo gopay">
                                 </div>
                                 <span>GoPay</span>
                             </button>
                             <button class="pay" id="ovoButton">
                                 <input type="radio" name="payment-method">
                                 <div class="img-pay">
-                                    <img src="./assets/payment/OVO.png" alt="logo ovo">
+                                    <img src="./assets/img/payment/OVO.png" alt="logo ovo">
                                 </div>
                                 <span>OVO</span>
                             </button>
                             <button class="pay" id="danaButton">
                                 <input type="radio" name="payment-method">
                                 <div class="img-pay">
-                                    <img src="./assets/payment/Dana.png" alt="logo dana">
+                                    <img src="./assets/img/payment/Dana.png" alt="logo dana">
                                 </div>
                                 <span>Dana</span>
                             </button>
                             <button class="pay" id="shopeePayButton">
                                 <input type="radio" name="payment-method">
                                 <div class="img-pay">
-                                    <img src="./assets/payment/shopeepay-logo-1762x350.png" alt="logo shopeepay">
+                                    <img src="./assets/img/payment/shopeepay-logo-1762x350.png" alt="logo shopeepay">
                                 </div>
                                 <span>ShopeePay</span>
                             </button>
@@ -144,13 +147,13 @@
                         <div class="payment none" id="payment-card">
                             <div class="allowed">
                                 <div class="img-bank">
-                                    <img src="./assets/payment/Visa-Logo.png" alt="visa logo">
+                                    <img src="./assets/img/payment/Visa-Logo.png" alt="visa logo">
                                 </div>
                                 <div class="img-bank">
-                                    <img src="./assets/payment/Mastercard-Logo.png" alt="mastercard logo">
+                                    <img src="./assets/img/payment/Mastercard-Logo.png" alt="mastercard logo">
                                 </div>
                                 <div class="img-bank">
-                                    <img src="./assets/payment/jcb.png" alt="jcb logo">
+                                    <img src="./assets/img/payment/jcb.png" alt="jcb logo">
                                 </div>
                             </div>
                             <div class="card-num">
@@ -183,7 +186,7 @@
                             <button class="pay" id="bcavButton">
                                 <input type="radio" name="payment-method">
                                 <div class="img-pay">
-                                    <img src="./assets/payment/bank-central-asia-logo-bank-central-asia-bca-format-cdr-png-gudril-1.png" alt="bca logo">
+                                    <img src="./assets/img/payment/bank-central-asia-logo-bank-central-asia-bca-format-cdr-png-gudril-1.png" alt="bca logo">
                                 </div>
                                 <span>BCA Virtual Account</span>
                             </button>
@@ -191,7 +194,7 @@
                             <button class="pay" id="mandiriButton">
                                 <input type="radio" name="payment-method">
                                 <div class="img-pay">
-                                    <img src="./assets/payment/p-2813-2-bank-mandiri-logo-png-transparent-logo-699390155888.png" alt="mandiri logo">
+                                    <img src="./assets/img/payment/p-2813-2-bank-mandiri-logo-png-transparent-logo-699390155888.png" alt="mandiri logo">
                                 </div>
                                 <span>Mandiri Virtual Account</span>
                             </button>
@@ -199,7 +202,7 @@
                             <button class="pay" id="bniButton">
                                 <input type="radio" name="payment-method">
                                 <div class="img-pay">
-                                    <img src="./assets/payment/105-1051729_bank-negara-indonesia-logo-bank-bni-transparan-clipart.png" alt="bni logo">
+                                    <img src="./assets/img/payment/105-1051729_bank-negara-indonesia-logo-bank-bni-transparan-clipart.png" alt="bni logo">
                                 </div>
                                 <span>BNI Virtual Account</span>
                             </button>
@@ -207,7 +210,7 @@
                             <button class="pay" id="brivButton">
                                 <input type="radio" name="payment-method">
                                 <div class="img-pay">
-                                    <img src="./assets/payment/bri-logo-freelogovectors.net_.png" alt="bri logo">
+                                    <img src="./assets/img/payment/bri-logo-freelogovectors.net_.png" alt="bri logo">
                                 </div>
                                 <span>BRI Virtual Account</span>
                             </button>
@@ -217,28 +220,28 @@
                             <button class="pay" id="alfaButton">
                                 <input type="radio" name="payment-method">
                                 <div class="img-pay">
-                                    <img src="./assets/payment/Alfamart-logo-1536x864.png" alt="alfamart logo">
+                                    <img src="./assets/img/payment/Alfamart-logo-1536x864.png" alt="alfamart logo">
                                 </div>
                                 <span>Alfamart</span>
                             </button>
                             <button class="pay" id="indoButton">
                                 <input type="radio" name="payment-method">
                                 <div class="img-pay">
-                                    <img src="./assets/payment/indomaret-1024x538.png" alt="indomaret logo">
+                                    <img src="./assets/img/payment/indomaret-1024x538.png" alt="indomaret logo">
                                 </div>
                                 <span>Indomaret</span>
                             </button>
                             <button class="pay" id="krediButton">
                                 <input type="radio" name="payment-method">
                                 <div class="img-pay">
-                                    <img src="./assets/payment/Logo Kredivo.png" alt="kredivo logo">
+                                    <img src="./assets/img/payment/Logo Kredivo.png" alt="kredivo logo">
                                 </div>
                                 <span>Kredivo</span>
                             </button>
                             <button class="pay" id="atomeButton">
                                 <input type="radio" name="payment-method">
                                 <div class="img-pay">
-                                    <img src="./assets/payment/ic-gettheapp-logo@2x.png" alt="atome logo">
+                                    <img src="./assets/img/payment/ic-gettheapp-logo@2x.png" alt="atome logo">
                                 </div>
                                 <span>Atome</span>
                             </button>
