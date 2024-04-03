@@ -161,6 +161,7 @@
                                     Card Number:
                                 </label>
                                 <input type="text" id="card-num" name="card-num" placeholder="Enter card number" required>
+                                <p class="error-message" id="numError"></p>
                             </div>
                             <div class="card-info-wrapper">
                                 <div class="card-expired">
@@ -172,12 +173,14 @@
                                         <span> / </span>
                                         <input type="text" id="card-year" placeholder="YY" required>
                                     </div>
+                                    <p class="error-message" id="expError"></p>
                                 </div>
                                 <div class="card-cvv">
                                     <label for="card-cvv">
                                         CVV:
                                     </label>
                                     <input type="text" id="card-cvv" placeholder="CVV" required>
+                                    <p class="error-message" id="cvvError"></p>
                                 </div>
                             </div>
                         </div>

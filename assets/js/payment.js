@@ -111,6 +111,20 @@ document.getElementById('address').addEventListener('blur', () => {
     validateAddress()
 })
 
+document.getElementById('card-num').addEventListener('blur', () => {
+    validateCardNum()
+})
+
+document.getElementById('card-month').addEventListener('blur', () => {
+    validateExpDate()
+})
+document.getElementById('card-year').addEventListener('blur', () => {
+    validateExpDate()
+})
+document.getElementById('card-cvv').addEventListener('blur', () => {
+    validateCvv()
+})
+
 // document.getElementById('phone').addEventListener('input', () => {
 //     this.value = this.value.replace(/\D/g, '');
 // })
@@ -151,5 +165,56 @@ function validateAddress() {
         addrError.textContent = 'Address must be at least 10 characters'
     } else {
         addrError.textContent = ''
+    }
+}
+
+function validateCardNum() {
+    var cardNum = document.getElementById('card-num').value
+    var numError = document.getElementById('numError')
+
+    if (!cardNum) {
+        numError.textContent = 'Card number is required'
+    } else if (!/^\d{16}$/.test(cardNum)) {
+        numError.textContent = 'Card number must be 16 digits long'
+    } else {
+        numError.textContent = ''
+    }
+}
+
+function validateExpDate() {
+    var expMonth = document.getElementById('card-month').value
+    var expYear = document.getElementById('card-year').value
+
+    var month = parseInt(expMonth)
+    // var year = parseInt(expYear)
+
+    var expError = document.getElementById('expError')
+
+    if (!expMonth) {
+        expError.textContent = 'Please input a month'
+    } else if (!/^\d{2}$/.test(expMonth)) {
+        expError.textContent = 'Month must be at least 2 digits long'
+    } else if (month < 1 || month > 12) {
+        expError.textContent = 'Invalid month'
+    } else if (!expYear) {
+        expError.textContent = 'Please input a year'
+    } else if (!/^\d{2}$/.test(expYear)) {
+        expError.textContent = 'Year must be at least 2 digits long'
+    }  else {
+        expError.textContent = ''
+    }
+}
+
+
+function validateCvv() {
+    var cvv = document.getElementById('card-cvv').value
+    var cvvError = document.getElementById('cvvError')
+
+    if (!cvv) {
+        cvvError.textContent = 'CVV is required'
+    } else if (!/^\d{3}$/.test(cvv)) {
+        cvvError.textContent = 'Invalid CVV'
+    } else {
+        cvvError.textContent = ''
     }
 }
