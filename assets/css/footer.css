@@ -5,15 +5,14 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
-.bodyFooter{
+/* .bodyFooter{
     display: grid;
     justify-content: center;
     align-content: end;
     min-height: 100vh;
     background: #fff;
     pad: 20px;
-}
+} */
 
 .footer__container{
     position: relative;
