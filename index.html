@@ -9,71 +9,89 @@
       <title>Toronto Cupcake Logo</title>
    </head>
    <body>
-      <header class = "header" id = "header">
-         <nav class = "nav container">
+        <header class="header">
+            <nav class="nav container">
+                <div class="nav__data">
+                    <a href="#" class="nav__logo">
+                        <img src="/assets/img/cupcakeLogo.png" alt="Toronto Cupcake Logo" width="100px" height="100px"/> Toronto Cupcake
+                    </a>
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-line nav__toggle-menu"></i>
+                        <i class="ri-close-line nav__toggle-close"></i>
+                    </div>
+                </div>
+                <!-- navbar-->
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li>
+                            <a href="#" class="nav__link">Home</a>
+                        </li>
 
-            <div class="logo">
-               <img src="/assets/img/cupcakeLogo.png" alt="Toronto Cupcake Logo"/>
-               <p class = "nav__item">
-                  <a href="#" class = "nav__link">Toronto Cupcake</a>
-               </p>
-             </div>
-            
-            <div class = "nav__menu" id  = "nav-menu">
-               <ul class = "nav__list">
+                        <!--dropdown-->
+                        <li class="dropdown__item">   
+                            <!--dropdown buat menu asya -->
+                            <div class="nav__link dropdown__button">
+                                Shop <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                            </div>
 
-                  <li class = "nav__item">
-                     <a href = "#" class = "nav__link">Home</a>
-                  </li>
+                            <div class="dropdown__container">
+                                <div class="dropdown__content">
+                                    <div class="dropdown__group">
+                                        <div class="dropdown__icon">
+                                            <i class="ri-flashlight-line"></i>
+                                        </div>
 
-                  <li class = "nav__item">
-                     <a href = "#" class = "nav__link">Shop</a>
-                  </li>
+                                        <span class="dropdown__title">Always Available</span>
+                                    </div>
 
-                  <li class = "nav__item">
-                     <a href = "#" class = "nav__link">About Us</a>
-                  </li>
+                                    <div class="dropdown__group">
+                                        <div class="dropdown__icon">
+                                            <i class="ri-heart-3-line"></i>
+                                        </div>
+                                        <span class="dropdown__title">Holidays</span>
+                                    </div>
 
-                  <li class = "nav__item">
-                     <a href = "#" class = "nav__link">Store Location</a>
-                  </li>
+                                    <div class="dropdown__group">
+                                        <div class="dropdown__icon">
+                                            <i class="ri-book-mark-line"></i>
+                                        </div>
+                                        <span class="dropdown__title">Special Events</span>
+                                    </div>
 
-                  <li class = "nav__item">
-                     <a href = "#" class = "nav__link">Contact Me</a>
-                  </li>
-               </ul>
+                                    <div class="dropdown__group">
+                                        <div class="dropdown__icon">
+                                            <i class="ri-file-paper-2-line"></i>
+                                        </div>
+                                        <span class="dropdown__title">Custom</span>
+                                    </div>
+                                    <div class="dropdown__group">
+                                        <div class="dropdown__icon">
+                                            <i class="ri-file-paper-2-line"></i>
+                                        </div>
+                                        <span class="dropdown__title">Premium</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
 
-               <div class = "nav__close" id = "nav-close">
-                  <i class = "ri-close-line"></i>
-               </div>
-            </div>
-
-            <div class = "nav__actions">
-               <i class = "ri-search-line nav__search" id = "search-btn"></i>
-               
-               <a href="register.html">
-                  <i class = "ri-user-line nav__login" id = "login-btn">    
-                  </i>
-               </a>
-
-               <div class = "nav__toggle" id = "nav-toggle">
-                  <i class = "ri-menu-line"></i>
-               </div>
-            </div>
-         </nav>
-      </header>
-
-      <div class = "search" id = "search">
-         <form action = "" class = "search__form">
-            <i class = "ri-search-line search__icon"></i>
-            <input type = "search" placeholder = "What are you looking for?" class = "search__input">
-         </form>
-
-         <i class = "ri-close-line search__close" id = "search-close"></i>
-      </div>
-
+                        <li>
+                            <a href="#" class="nav__link">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav__link">Store Location</a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav__link"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </li>
+                        <li>
+                            <a href="register.html" class="nav__link"><i class="fa-regular fa-user"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
       <main class = "main">
-        <!-- Konten Menu -->
+        <!--buat konten home-->
       </main>
       <footer>
         <div class="footer__container">
