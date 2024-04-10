@@ -2,102 +2,99 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign in & Sign up Form</title>
+    <title>Sign Form</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
     <link rel="stylesheet" href = "assets/css/style.css" />
   </head>
   <body>
-    <header class="header">
+    <header class="nav_header">
       <nav class="nav container">
-          <div class="nav__data">
-              <a href="#" class="nav__logo">
+          <div class="nav_data">
+              <a href="index.html" class="nav_logo">
                   <img src="/assets/img/cupcakeLogo.png" alt="Toronto Cupcake Logo" width="100px" height="100px"/> Toronto Cupcake
               </a>
-
-              <div class="nav__toggle" id="nav-toggle">
-                  <i class="ri-menu-line nav__toggle-menu"></i>
-                  <i class="ri-close-line nav__toggle-close"></i>
+              <div class="nav_toggle" id="nav-toggle">
+                  <i class="ri-menu-line nav_toggle-menu"></i>
+                  <i class="ri-close-line nav_toggle-close"></i>
               </div>
           </div>
-
           <!-- navbar-->
-          <div class="nav__menu" id="nav-menu">
-              <ul class="nav__list">
+          <div class="nav_menu" id="nav-menu">
+              <ul class="nav_list">
                   <li>
-                      <a href="#" class="nav__link">Home</a>
+                      <a href="index.html" class="nav_link">Home</a>
                   </li>
 
                   <!--dropdown-->
-                  <li class="dropdown__item">   
-                      <!--menu asya -->
-                      <div class="nav__link dropdown__button">
-                          Shop <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                  <li class="dropdown_item">   
+                      <!--dropdown buat menu asya -->
+                      <div class="nav_link dropdown_button">
+                          Shop <i class="ri-arrow-down-s-line dropdown_arrow"></i>
                       </div>
 
-                      <div class="dropdown__container">
-                          <div class="dropdown__content">
-                              <div class="dropdown__group">
-                                  <div class="dropdown__icon">
-                                      <i class="ri-flashlight-line"></i>
+                      <div class="dropdown_container">
+                          <div class="dropdown_content">
+                              <div class="dropdown_group">
+                                  <div class="dropdown_icon">
+                                      <i class="ri-cake-line"></i>
                                   </div>
 
-                                  <span class="dropdown__title">Always Available</span>
+                                  <span class="dropdown_title">Always Available</span>
                               </div>
 
-                              <div class="dropdown__group">
-                                  <div class="dropdown__icon">
-                                      <i class="ri-heart-3-line"></i>
+                              <div class="dropdown_group">
+                                  <div class="dropdown_icon">
+                                      <i class="ri-cake-3-line"></i>
                                   </div>
-                                  <span class="dropdown__title">Holidays</span>
+                                  <span class="dropdown_title">Holidays</span>
                               </div>
 
-                              <div class="dropdown__group">
-                                  <div class="dropdown__icon">
-                                      <i class="ri-book-mark-line"></i>
+                              <div class="dropdown_group">
+                                  <div class="dropdown_icon">
+                                      <i class="ri-cake-2-line"></i>
                                   </div>
-                                  <span class="dropdown__title">Special Events</span>
+                                  <span class="dropdown_title">Special Events</span>
                               </div>
 
-                              <div class="dropdown__group">
-                                  <div class="dropdown__icon">
-                                      <i class="ri-file-paper-2-line"></i>
+                              <div class="dropdown_group">
+                                  <div class="dropdown_icon">
+                                      <i class="ri-cake-2-fill"></i>
                                   </div>
-                                  <span class="dropdown__title">Custom</span>
+                                  <span class="dropdown_title">Custom</span>
                               </div>
-                              <div class="dropdown__group">
-                                  <div class="dropdown__icon">
-                                      <i class="ri-file-paper-2-line"></i>
+                              <div class="dropdown_group">
+                                  <div class="dropdown_icon">
+                                      <i class="ri-cake-3-fill"></i>
                                   </div>
-                                  <span class="dropdown__title">Premium</span>
+                                  <span class="dropdown_title">Premium</span>
                               </div>
                           </div>
                       </div>
                   </li>
 
                   <li>
-                      <a href="#" class="nav__link">About Us</a>
+                      <a href="#" class="nav_link">About Us</a>
                   </li>
                   <li>
-                      <a href="#" class="nav__link">Store Location</a>
+                      <a href="#" class="nav_link">Store Location</a>
                   </li>
                   <li>
-                      <a href="#" class="nav__link"><i class="fa-solid fa-cart-shopping"></i></a>
+                      <a href="#" class="nav_link"><i class="fa-solid fa-cart-shopping"></i></a>
                   </li>
                   <li>
-                      <a href="register.html" class="nav__link"><i class="fa-regular fa-user"></i></a>
+                      <a href="register.html" class="nav_link"><i class="fa-regular fa-user"></i></a>
                   </li>
               </ul>
           </div>
       </nav>
   </header>
    <main>
-      <div class="box">
+      <div class="register_box">
         <div class="inner-box">
           <div class="forms-wrap">
-            <form action="index.html" autocomplete="off" class="sign-in-form">
+            <form action="home.html" autocomplete="off" class="sign-in-form">
               <div class="heading">
                 <h2>Welcome Back</h2>
                 <h6>Not registred yet?</h6>
@@ -115,7 +112,7 @@
                   <label>Password</label>
                 </div>
 
-                <input type="submit" value="Sign In" class="sign-btn" />
+                <input type="submit" value="Login" class="sign-btn" />
 
                 <p class="text">
                   Forgotten your password or login datails?
@@ -124,11 +121,11 @@
               </div>
             </form>
 
-            <form action="index.html" autocomplete="off" class="sign-up-form">
+            <form action="register.html" autocomplete="off" class="sign-up-form">
               <div class="heading">
                 <h2>Get Started</h2>
-                <h6>Already have an account?</h6>
-                <a href="#" class="toggle">Sign in</a>
+                <h6>Have an account?</h6>
+                <a href="#" class="toggle">Login</a>
               </div>
 
               <div class="actual-form">
@@ -163,9 +160,7 @@
                   />
                   <label>Password</label>
                 </div>
-
-                <input type="submit" value="Sign Up" class="sign-btn" />
-
+                <input type="submit" value="Register" class="sign-btn" />
                 <p class="text">By creating an account, you agreeing to our
                   <a href="#">Privacy Policy</a> and
                   <a href="#">Electronics Communication Policy</a>

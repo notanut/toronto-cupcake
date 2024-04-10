@@ -14,11 +14,11 @@ const showMenu = (toggleId, navId) =>{
 showMenu('nav-toggle','nav-menu')
 
 /*nampilin dropdown menu*/
-const dropdownItems = document.querySelectorAll('.dropdown__item')
+const dropdownItems = document.querySelectorAll('.dropdown_item')
 
 //ngambil semua dropdown item
 dropdownItems.forEach((item) =>{
-    const dropdownButton = item.querySelector('.dropdown__button') 
+    const dropdownButton = item.querySelector('.dropdown_button') 
 
     //button click
     dropdownButton.addEventListener('click', () =>{
@@ -31,7 +31,7 @@ dropdownItems.forEach((item) =>{
 })
 
 const toggleItem = (item) =>{
-    const dropdownContainer = item.querySelector('.dropdown__container')
+    const dropdownContainer = item.querySelector('.dropdown_container')
     if(item.classList.contains('show-dropdown')){
         dropdownContainer.removeAttribute('style')
         item.classList.remove('show-dropdown')
@@ -42,7 +42,7 @@ const toggleItem = (item) =>{
 }
 
 const mediaQuery = matchMedia('(min-width: 1118px)'),
-      dropdownContainer = document.querySelectorAll('.dropdown__container')
+      dropdownContainer = document.querySelectorAll('.dropdown_container')
 
 const removeStyle = () =>{
     if(mediaQuery.matches){
