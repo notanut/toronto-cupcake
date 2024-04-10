@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/* css buat nav bar */
 header {
   padding: 0;
   margin: 0;
@@ -287,7 +288,7 @@ header {
   }
 }
 
-/* CSS buat SignUp Page (register.html) */
+/* css buat register.html */
 *,
 *::before,
 *::after {
@@ -657,7 +658,7 @@ main.sign-up-mode .carousel {
   }
 }
 
-/* CSS buat Footer*/
+/* css buat footer*/
 .footer_container{
   position: relative;
   width: 100%;
@@ -742,7 +743,6 @@ main.sign-up-mode .carousel {
   border: 1px solid rgba(0,0,0,0.15);
 } 
 @media (max-width: 1100px){
-  /* Footer Container */
   .footer_container {
     position: relative;
     width: 100%;
