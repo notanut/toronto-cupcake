@@ -482,6 +482,13 @@ main form {
   overflow: hidden;
 }
 
+.order-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
 .order-name {
   font-weight: 700;
   font-size: 1rem;
@@ -704,6 +711,10 @@ main form {
 .submit:hover {
   background-color: transparent;
   color: #f384a7;
+}
+
+@media screen and (max-width: 768px) {
+  
 }
 
 @media screen and (max-width: 980px) {

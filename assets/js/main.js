@@ -1,44 +1,58 @@
-/*=============== SHOW MENU ===============*/
-const navMenu = document.getElementById('nav-menu'),
-      navToggle = document.getElementById('nav-toggle'),
-      navClose = document.getElementById('nav-close')
+/*show menu*/
+const showMenu = (toggleId, navId) =>{
+   const toggle = document.getElementById(toggleId),
+         nav = document.getElementById(navId)
 
-/* Menu show */
-navToggle.addEventListener('click', () =>{
-   navMenu.classList.add('show-menu')
+   toggle.addEventListener('click', () =>{
+       // nambah show-menu class ke nav menu
+       nav.classList.toggle('show-menu')
+       // nambah show-icon buat nunjukin sm hide menu icon
+       toggle.classList.toggle('show-icon')
+   })
+}
+
+showMenu('nav-toggle','nav-menu')
+
+/*nampilin dropdown menu*/
+const dropdownItems = document.querySelectorAll('.dropdown__item')
+
+//ngambil semua dropdown item
+dropdownItems.forEach((item) =>{
+    const dropdownButton = item.querySelector('.dropdown__button') 
+
+    //button click
+    dropdownButton.addEventListener('click', () =>{
+        const showDropdown = document.querySelector('.show-dropdown')
+        toggleItem(item)
+        if(showDropdown && showDropdown!== item){
+            toggleItem(showDropdown)
+        }
+    })
 })
 
-/* Menu hidden */
-navClose.addEventListener('click', () =>{
-   navMenu.classList.remove('show-menu')
-})
+const toggleItem = (item) =>{
+    const dropdownContainer = item.querySelector('.dropdown__container')
+    if(item.classList.contains('show-dropdown')){
+        dropdownContainer.removeAttribute('style')
+        item.classList.remove('show-dropdown')
+    } else{
+        dropdownContainer.style.height = dropdownContainer.scrollHeight + 'px'
+        item.classList.add('show-dropdown')
+    }
+}
 
-/*=============== SEARCH ===============*/
-const search = document.getElementById('search'),
-      searchBtn = document.getElementById('search-btn'),
-      searchClose = document.getElementById('search-close')
+const mediaQuery = matchMedia('(min-width: 1118px)'),
+      dropdownContainer = document.querySelectorAll('.dropdown__container')
 
-/* Search show */
-searchBtn.addEventListener('click', () =>{
-   search.classList.add('show-search')
-})
+const removeStyle = () =>{
+    if(mediaQuery.matches){
+        dropdownContainer.forEach((e) =>{
+            e.removeAttribute('style')
+        })
+        dropdownItems.forEach((e) =>{
+            e.classList.remove('show-dropdown')
+        })
+    }
+}
 
-/* Search hidden */
-searchClose.addEventListener('click', () =>{
-   search.classList.remove('show-search')
-})
-
-/*=============== LOGIN ===============*/
-const login = document.getElementById('login'),
-      loginBtn = document.getElementById('login-btn'),
-      loginClose = document.getElementById('login-close')
-
-/* Login show */
-loginBtn.addEventListener('click', () =>{
-   login.classList.add('show-login')
-})
-
-/* Login hidden */
-loginClose.addEventListener('click', () =>{
-   login.classList.remove('show-login')
-})
+addEventListener('resize', removeStyle)
