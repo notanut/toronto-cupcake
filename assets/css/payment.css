@@ -425,6 +425,11 @@ img {
   }
 }
 
+body {
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Nunito", sans-serif;
+  /* font-family: "Oxygen", sans-serif; */
+}
 
 main {
     background: linear-gradient(to bottom, #FFE9F0, #DFD9FF);
@@ -457,7 +462,7 @@ main .main-cont {
 
 .order-wrapper {
   display: flex;
-  gap: 2vw;
+  gap: 4vw;
   align-items: center;
 }
 
@@ -487,6 +492,11 @@ main .main-cont {
   height: 100%;
   object-fit: cover;
   vertical-align: middle;
+}
+
+.order-add {
+  font-style: italic;
+  font-weight: 300;
 }
 
 .order-name {
@@ -717,14 +727,14 @@ main .main-cont {
 #popup-card {
   position: fixed;
   max-width: 680px;
-  /* width: 380px; */
+  width: 300px;
   min-width: 240px;
   background-color: white;
   box-shadow: 1px 1px 10px -4px rgba(0,0,0,.2);
   border-radius: 10px;
   transform: translate(-50%, -50%);
   transform: scale(0);
-  transform-origin: center;
+  transform-origin: 0;
   top: 50%;
   left: 50%;
   padding: 3vw;
@@ -829,12 +839,13 @@ main .main-cont {
   }
 
   .payment-method-mobile .mobile-payment-wrapper{
-    display: none;
-    transition: display .5s ease-in-out;
+    height: 0;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
   }
-
+  
   .payment-method-mobile.active .mobile-payment-wrapper{
-    display: block;
+    height: 1117px;
   }
 
   .payment-method-mobile .fa-chevron-down {
@@ -892,6 +903,18 @@ main .main-cont {
     font-size: .85rem;
   }
 
+}
+
+@media screen and (max-width: 450px) {
+  main {
+    padding: 1rem;
+    margin-top: 1rem;
+    padding-top: 17vw;
+  }
+
+  .order-info-wrapper {
+    max-width: 180px;
+  }
 }
 
 @media screen and (max-width: 980px) {

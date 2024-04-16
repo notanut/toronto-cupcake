@@ -53,7 +53,7 @@ function toggleActive(button, id) {
             buttons[i].classList.remove('active')
         }
         checkPayment = false
-        checkInputs()
+        checkInputsDesk()
     }
 }
 
@@ -270,7 +270,10 @@ function validateExpDate() {
     } else if (!/^\d{2}$/.test(expYear)) {
         expError.textContent = 'Year must be at least 2 digits long'
         checkYearCardDesk = false
-    }  else {
+    }  else if (expYear < 24) {
+        expError.textContent = 'Minimum year must be 2024'
+        checkYearCardDesk = false
+    } else {
         expError.textContent = ''
         checkYearCardDesk = true
         checkMonthCardDesk = true
@@ -337,11 +340,13 @@ options.forEach(option =>  {
 
         if (option.id === 'card-mobile-btn') {
             checkPayment = false
-        }
+            checkInputs()
+        } 
         
         checkSubmitOrder()
 
         menuPayment.classList.remove('active')
+        
     })
 })
 
@@ -406,7 +411,10 @@ function validateExpDateMobile() {
     } else if (!/^\d{2}$/.test(expYear)) {
         expError.textContent = 'Year must be at least 2 digits long'
         cardyearCheck = false
-    } else {
+    } else if (expYear < 24) {
+        expError.textContent = 'Minimum year must be 2024'
+        checkYearCardDesk = false
+    }  else {
         expError.textContent = ''
         cardmonthCheck = true
         cardyearCheck = true
@@ -438,18 +446,10 @@ function checkInputs() {
     } else {
         submitBtn.disabled = true
         checkPayment = false
+        checkSubmitOrder()
     }
-    checkSubmitOrder()
-
 }
 
-
-// document.addEventListener('click', () => {
-//     const popupContainer = document.getElementById('popup-card')
-//       if (!popupContainer.contains(event.target)) {
-//         togglePopUp()
-//       }
-// })
 
 var submitAllButton = document.getElementById('submit-order')
 function checkSubmitOrder() {
@@ -460,9 +460,37 @@ function checkSubmitOrder() {
     }
 }
 
+function closePopUp() {
+    var overlay = document.getElementById('overlay')
+    overlay.classList.toggle('pop-active')
+    var popupCard = document.getElementById('popup-card')
+    popupCard.classList.toggle('pop-active')
+    if (!checkPayment) {
+        btnText.innerText = 'Select Payment Method'
+
+        while (selectImg.firstChild) {
+            selectImg.removeChild(selectImg.firstChild)
+        }
+        var newI = document.createElement('i')
+        newI.className = 'fa-solid fa-wallet'
+        selectImg.appendChild(newI)
+    }
+}
+
 function togglePopUp(){
     var overlay = document.getElementById('overlay')
     overlay.classList.toggle('pop-active')
     var popupCard = document.getElementById('popup-card')
     popupCard.classList.toggle('pop-active')
+    checkSubmitOrder()
+    if (!checkPayment) {
+        btnText.innerText = 'Select Payment Method'
+
+        while (selectImg.firstChild) {
+            selectImg.removeChild(selectImg.firstChild)
+        }
+        var newI = document.createElement('div')
+        newI.className = 'fa-solid fa-wallet'
+        selectImg.appendChild(newI)
+    }
 }
