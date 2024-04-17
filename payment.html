@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,600;0,700;0,900;1,100;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Nunito -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <!-- Oxygen -->
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./assets/css/payment.css">
     <script defer src="./assets/js/payment.js"></script>
     <title>Checkout</title>
@@ -63,40 +73,40 @@
      </header>
     <main>
         <h1>Checkout</h1>
-        <form action="#" class="input-form">
-        <section class="left">
-            <div class="orders">
-                <h2>Order Detail</h2>
-                <div class="order">
-                    <div class="order-wrapper">
-                        <div class="img-container">
-                            <img src="./assets/img/payment/luisana-zerpa-MJPr6nOdppw-unsplash.jpg" alt="cupcake" class="order-img">
+        <section class="main-cont">
+            <section class="left">
+                <div class="orders">
+                    <h2>Order Detail</h2>
+                    <div class="order">
+                        <div class="order-wrapper">
+                            <div class="img-container">
+                                <img src="./assets/img/payment/luisana-zerpa-MJPr6nOdppw-unsplash.jpg" alt="cupcake" class="order-img">
+                            </div>
+                            <div class="order-info-wrapper">
+                                <p class="order-name">Redvelvet Cupcake</p>
+                                <p class="order-add">Additional Topping: Chocolate</p>
+                                <p class="order-qty">Qty: 2</p>
+                            </div>
                         </div>
-                        <div class="order-info-wrapper">
-                            <p class="order-name">Redvelvet Cupcake</p>
-                            <p class="order-add">Additional Topping: Chocolate</p>
-                            <p class="order-qty">Qty: 2</p>
-                        </div>
+                        <span class="order-price">$5.00</span>
                     </div>
-                    <span class="order-price">$5.00</span>
-                </div>
 
-                <div class="order">
-                    <div class="order-wrapper">
-                        <div class="img-container">
-                            <img src="./assets/img/payment/sara-cervera-FAnSK-gVGZU-unsplash.jpg" alt="cupcake" class="order-img">
+                    <div class="order">
+                        <div class="order-wrapper">
+                            <div class="img-container">
+                                <img src="./assets/img/payment/sara-cervera-FAnSK-gVGZU-unsplash.jpg" alt="cupcake" class="order-img">
+                            </div>
+                            <div class="order-info-wrapper">
+                                <p class="order-name">Rainbow Cupcake</p>
+                                <p class="order-add">Additional Topping: Strawberry</p>
+                                <p class="order-qty">Qty: 2</p>
+                            </div>
                         </div>
-                        <div class="order-info-wrapper">
-                            <p class="order-name">Rainbow Cupcake</p>
-                            <p class="order-add">Additional Topping: Strawberry</p>
-                            <p class="order-qty">Qty: 2</p>
-                        </div>
+                        <span class="order-price">$5.00</span>
                     </div>
-                    <span class="order-price">$5.00</span>
                 </div>
-            </div>
-    
-                <div class="input-recipient">
+        
+                <form action="#" class="input-recipient">
                     <h2>Delivery Detail</h2>
                     <div class="input-wrapper">
                         <div class="input-name">
@@ -106,7 +116,7 @@
                             <input type="text" id="name" placeholder="Enter name" required>
                             <p class="error-message" id="nameError"></p>
                         </div>
-        
+            
                         <div class="input-number">
                             <label for="phone">
                                 Phone Number:
@@ -115,225 +125,363 @@
                             <p class="error-message" id="phoneError"></p>
                         </div>
                     </div>
-    
-                    <div class="input-address">
-                        <label for="address">
-                            Address:
-                        </label>
-                        <textarea name="address" id="address" cols="20" rows="3" placeholder="Enter address"></textarea>
-                        <p class="error-message" id="addrError"></p>
-                    </div>
-                </div>
-    
-                <div class="payment-method">
-                    <h2>Payment Method</h2>
-                    <div class="payment-wrapper">
-                        <div class="category">
-                            <button id="recent" onclick="toggleActive(this, 'payment-recent')" class="pay-btn active">Recent</button>
-                            <button id="e-wallet" class="pay-btn" onclick="toggleActive(this, 'payment-ewallet')">E-Wallet</button>
-                            <button id="card" class="pay-btn" onclick="toggleActive(this, 'payment-card')">Credit/Debit Card</button>
-                            <button id="card" class="pay-btn" onclick="toggleActive(this, 'payment-virtual')">Virtual Account</button>
-                            <button id="card" class="pay-btn" onclick="toggleActive(this, 'payment-others')">Others</button>
-                        </div>
-                        <div class="payment" id="payment-recent">
-                            <button class="pay" id="bcaButton">
-                                <input type="radio" name="payment-method">
-                                <div class="img-pay">
-                                    <img src="./assets/img/payment/bank-central-asia-logo-bank-central-asia-bca-format-cdr-png-gudril-1.png" alt="logo bca">
-                                </div>
-                                <span>BCA Virtual Account</span>
-                            </button>
-                            <button class="pay" id="briButton">
-                                <input type="radio" name="payment-method">
-                                <div class="img-pay">
-                                    <img src="./assets/img/payment/105-1051729_bank-negara-indonesia-logo-bank-bni-transparan-clipart.png" alt="logo bri">
-                                </div>
-                                <span>BRI Virtual Account</span>
-                            </button>
-                            <button class="pay" id="gopayButton">
-                                <input type="radio" name="payment-method">
-                                <div class="img-pay">
-                                    <img src="./assets/img/payment/gopay.png" alt="logo gopay">
-                                </div>
-                                <span>GoPay</span>
-                            </button>
-                            <button class="pay" id="kredivoButton">
-                                <input type="radio" name="payment-method">
-                                <div class="img-pay">
-                                    <img src="./assets/img/payment/Logo Kredivo.png" alt="logo kredivo">
-                                </div>
-                                <span>Kredivo</span>
-                            </button>
-                        </div>
-                        
-                        <div class="payment none" id="payment-ewallet">
-                            <button class="pay" id="gpayButton">
-                                <input type="radio" name="payment-method">
-                                <div class="img-pay">
-                                    <img src="./assets/img/payment/gopay.png" alt="logo gopay">
-                                </div>
-                                <span>GoPay</span>
-                            </button>
-                            <button class="pay" id="ovoButton">
-                                <input type="radio" name="payment-method">
-                                <div class="img-pay">
-                                    <img src="./assets/img/payment/OVO.png" alt="logo ovo">
-                                </div>
-                                <span>OVO</span>
-                            </button>
-                            <button class="pay" id="danaButton">
-                                <input type="radio" name="payment-method">
-                                <div class="img-pay">
-                                    <img src="./assets/img/payment/Dana.png" alt="logo dana">
-                                </div>
-                                <span>Dana</span>
-                            </button>
-                            <button class="pay" id="shopeePayButton">
-                                <input type="radio" name="payment-method">
-                                <div class="img-pay">
-                                    <img src="./assets/img/payment/shopeepay-logo-1762x350.png" alt="logo shopeepay">
-                                </div>
-                                <span>ShopeePay</span>
-                            </button>
-                        </div>
         
-                        <div class="payment none" id="payment-card">
-                            <div class="allowed">
-                                <div class="img-bank">
-                                    <img src="./assets/img/payment/Visa-Logo.png" alt="visa logo">
-                                </div>
-                                <div class="img-bank">
-                                    <img src="./assets/img/payment/Mastercard-Logo.png" alt="mastercard logo">
-                                </div>
-                                <div class="img-bank">
-                                    <img src="./assets/img/payment/jcb.png" alt="jcb logo">
-                                </div>
+                        <div class="input-address">
+                            <label for="address">
+                                Address:
+                            </label>
+                            <textarea name="address" id="address" cols="20" rows="3" placeholder="Enter address"></textarea>
+                            <p class="error-message" id="addrError"></p>
+                        </div>
+                </form>
+        
+                    <div class="payment-method" id="payment">
+                        <h2>Payment Method</h2>
+                        <div class="payment-wrapper">
+                            <div class="category">
+                                <button id="recent" onclick="toggleActive(this, 'payment-recent')" class="pay-btn active">Recommendation</button>
+                                <button id="e-wallet" class="pay-btn" onclick="toggleActive(this, 'payment-ewallet')">E-Wallet</button>
+                                <button id="card" class="pay-btn" onclick="toggleActive(this, 'payment-card')">Credit/Debit Card</button>
+                                <button id="virtualAccount" class="pay-btn" onclick="toggleActive(this, 'payment-virtual')">Virtual Account</button>
+                                <button id="othersPay" class="pay-btn" onclick="toggleActive(this, 'payment-others')">Others</button>
                             </div>
-                            <div class="card-num">
-                                <label for="card-num">
-                                    Card Number:
-                                </label>
-                                <input type="text" id="card-num" name="card-num" placeholder="Enter card number" required>
-                                <p class="error-message" id="numError"></p>
-                            </div>
-                            <div class="card-info-wrapper">
-                                <div class="card-expired">
-                                    <label for="card-expired">
-                                        Valid Until: 
-                                    </label>
-                                    <div class="expired-wrapper">
-                                        <input type="text" id="card-month" placeholder="MM" required>
-                                        <span> / </span>
-                                        <input type="text" id="card-year" placeholder="YY" required>
+                            <div class="payment" id="payment-recent">
+                                <button class="pay" id="bcaButton">
+                                    <input type="radio" name="payment-method">
+                                    <div class="img-pay">
+                                        <img src="./assets/img/payment/bank-central-asia-logo-bank-central-asia-bca-format-cdr-png-gudril-1.png" alt="logo bca">
                                     </div>
-                                    <p class="error-message" id="expError"></p>
-                                </div>
-                                <div class="card-cvv">
-                                    <label for="card-cvv">
-                                        CVV:
-                                    </label>
-                                    <input type="password" id="card-cvv" placeholder="CVV" required>
-                                    <p class="error-message" id="cvvError"></p>
-                                </div>
+                                    <span>BCA Virtual Account</span>
+                                </button>
+                                <button class="pay" id="briButton">
+                                    <input type="radio" name="payment-method">
+                                    <div class="img-pay">
+                                        <img src="./assets/img/payment/105-1051729_bank-negara-indonesia-logo-bank-bni-transparan-clipart.png" alt="logo bri">
+                                    </div>
+                                    <span>BRI Virtual Account</span>
+                                </button>
+                                <button class="pay" id="gopayButton">
+                                    <input type="radio" name="payment-method">
+                                    <div class="img-pay">
+                                        <img src="./assets/img/payment/gopay.png" alt="logo gopay">
+                                    </div>
+                                    <span>GoPay</span>
+                                </button>
+                                <button class="pay" id="kredivoButton">
+                                    <input type="radio" name="payment-method">
+                                    <div class="img-pay">
+                                        <img src="./assets/img/payment/Logo Kredivo.png" alt="logo kredivo">
+                                    </div>
+                                    <span>Kredivo</span>
+                                </button>
                             </div>
-                        </div>
-                        
-                        <div class="payment none" id="payment-virtual">
-                            <button class="pay" id="bcavButton">
-                                <input type="radio" name="payment-method">
-                                <div class="img-pay">
-                                    <img src="./assets/img/payment/bank-central-asia-logo-bank-central-asia-bca-format-cdr-png-gudril-1.png" alt="bca logo">
-                                </div>
-                                <span>BCA Virtual Account</span>
-                            </button>
-        
-                            <button class="pay" id="mandiriButton">
-                                <input type="radio" name="payment-method">
-                                <div class="img-pay">
-                                    <img src="./assets/img/payment/p-2813-2-bank-mandiri-logo-png-transparent-logo-699390155888.png" alt="mandiri logo">
-                                </div>
-                                <span>Mandiri Virtual Account</span>
-                            </button>
-        
-                            <button class="pay" id="bniButton">
-                                <input type="radio" name="payment-method">
-                                <div class="img-pay">
-                                    <img src="./assets/img/payment/105-1051729_bank-negara-indonesia-logo-bank-bni-transparan-clipart.png" alt="bni logo">
-                                </div>
-                                <span>BNI Virtual Account</span>
-                            </button>
-        
-                            <button class="pay" id="brivButton">
-                                <input type="radio" name="payment-method">
-                                <div class="img-pay">
-                                    <img src="./assets/img/payment/bri-logo-freelogovectors.net_.png" alt="bri logo">
-                                </div>
-                                <span>BRI Virtual Account</span>
-                            </button>
-                        </div>
-        
-                        <div class="payment none" id="payment-others">
-                            <button class="pay" id="alfaButton">
-                                <input type="radio" name="payment-method">
-                                <div class="img-pay">
-                                    <img src="./assets/img/payment/Alfamart-logo-1536x864.png" alt="alfamart logo">
-                                </div>
-                                <span>Alfamart</span>
-                            </button>
-                            <button class="pay" id="indoButton">
-                                <input type="radio" name="payment-method">
-                                <div class="img-pay">
-                                    <img src="./assets/img/payment/indomaret-1024x538.png" alt="indomaret logo">
-                                </div>
-                                <span>Indomaret</span>
-                            </button>
-                            <button class="pay" id="krediButton">
-                                <input type="radio" name="payment-method">
-                                <div class="img-pay">
-                                    <img src="./assets/img/payment/Logo Kredivo.png" alt="kredivo logo">
-                                </div>
-                                <span>Kredivo</span>
-                            </button>
-                            <button class="pay" id="atomeButton">
-                                <input type="radio" name="payment-method">
-                                <div class="img-pay">
-                                    <img src="./assets/img/payment/ic-gettheapp-logo@2x.png" alt="atome logo">
-                                </div>
-                                <span>Atome</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="right">
-                <div class="order-summary">
-                    <h2>Order Summary</h2>
-                    <div class="sub-wrapper">
-                        <div class="sub">
-                            <span class="sub-title">Subtotal</span>
-                            <span class="sub-price">$10.00</span>
-                        </div>
-                        <div class="sub">
-                            <span class="sub-title">Shipping Cost</span>
-                            <span class="sub-price">$3.00</span>
-                        </div>
-                        <div class="sub">
-                            <span class="sub-title">Tax</span>
-                            <span class="sub-price">$1.00</span>
-                        </div>
+                            
+                            <div class="payment none" id="payment-ewallet">
+                                <button class="pay" id="gpayButton">
+                                    <input type="radio" name="payment-method">
+                                    <div class="img-pay">
+                                        <img src="./assets/img/payment/gopay.png" alt="logo gopay">
+                                    </div>
+                                    <span>GoPay</span>
+                                </button>
+                                <button class="pay" id="ovoButton">
+                                    <input type="radio" name="payment-method">
+                                    <div class="img-pay">
+                                        <img src="./assets/img/payment/OVO.png" alt="logo ovo">
+                                    </div>
+                                    <span>OVO</span>
+                                </button>
+                                <button class="pay" id="danaButton">
+                                    <input type="radio" name="payment-method">
+                                    <div class="img-pay">
+                                        <img src="./assets/img/payment/Dana.png" alt="logo dana">
+                                    </div>
+                                    <span>Dana</span>
+                                </button>
+                                <button class="pay" id="shopeePayButton">
+                                    <input type="radio" name="payment-method">
+                                    <div class="img-pay">
+                                        <img src="./assets/img/payment/shopeepay-logo-1762x350.png" alt="logo shopeepay">
+                                    </div>
+                                    <span>ShopeePay</span>
+                                </button>
+                            </div>
             
-                        <div class="total">
-                            <div class="total-wrap">
-                                <span class="title">Total</span>
-                                <span class="price">$14.00</span>
+                            <form action="#" class="payment none" id="payment-card">
+                                <div class="allowed">
+                                    <div class="img-bank">
+                                        <img src="./assets/img/payment/Visa-Logo.png" alt="visa logo">
+                                    </div>
+                                    <div class="img-bank">
+                                        <img src="./assets/img/payment/Mastercard-Logo.png" alt="mastercard logo">
+                                    </div>
+                                    <div class="img-bank">
+                                        <img src="./assets/img/payment/jcb.png" alt="jcb logo">
+                                    </div>
+                                </div>
+                                <div class="card-num">
+                                    <label for="card-num">
+                                        Card Number:
+                                    </label>
+                                    <input type="text" id="card-num" name="card-num" placeholder="Enter card number" required>
+                                    <p class="error-message" id="numError"></p>
+                                </div>
+                                <div class="card-info-wrapper">
+                                    <div class="card-expired">
+                                        <label for="card-expired">
+                                            Valid Until: 
+                                        </label>
+                                        <div class="expired-wrapper">
+                                            <input type="text" id="card-month" placeholder="MM" required>
+                                            <span> / </span>
+                                            <input type="text" id="card-year" placeholder="YY" required>
+                                        </div>
+                                        <p class="error-message" id="expError"></p>
+                                    </div>
+                                    <div class="card-cvv">
+                                        <label for="card-cvv">
+                                            CVV:
+                                        </label>
+                                        <input type="password" id="card-cvv" placeholder="CVV" required>
+                                        <p class="error-message" id="cvvError"></p>
+                                    </div>
+                                </div>
+                            </form>
+                            
+                            <div class="payment none" id="payment-virtual">
+                                <button class="pay" id="bcavButton">
+                                    <input type="radio" name="payment-method">
+                                    <div class="img-pay">
+                                        <img src="./assets/img/payment/bank-central-asia-logo-bank-central-asia-bca-format-cdr-png-gudril-1.png" alt="bca logo">
+                                    </div>
+                                    <span>BCA Virtual Account</span>
+                                </button>
+            
+                                <button class="pay" id="mandiriButton">
+                                    <input type="radio" name="payment-method">
+                                    <div class="img-pay">
+                                        <img src="./assets/img/payment/p-2813-2-bank-mandiri-logo-png-transparent-logo-699390155888.png" alt="mandiri logo">
+                                    </div>
+                                    <span>Mandiri Virtual Account</span>
+                                </button>
+            
+                                <button class="pay" id="bniButton">
+                                    <input type="radio" name="payment-method">
+                                    <div class="img-pay">
+                                        <img src="./assets/img/payment/105-1051729_bank-negara-indonesia-logo-bank-bni-transparan-clipart.png" alt="bni logo">
+                                    </div>
+                                    <span>BNI Virtual Account</span>
+                                </button>
+            
+                                <button class="pay" id="brivButton">
+                                    <input type="radio" name="payment-method">
+                                    <div class="img-pay">
+                                        <img src="./assets/img/payment/bri-logo-freelogovectors.net_.png" alt="bri logo">
+                                    </div>
+                                    <span>BRI Virtual Account</span>
+                                </button>
                             </div>
-                            <button class="submit">place order</button>
+            
+                            <div class="payment none" id="payment-others">
+                                <button class="pay" id="alfaButton">
+                                    <input type="radio" name="payment-method">
+                                    <div class="img-pay">
+                                        <img src="./assets/img/payment/Alfamart-logo-1536x864.png" alt="alfamart logo">
+                                    </div>
+                                    <span>Alfamart</span>
+                                </button>
+                                <button class="pay" id="indoButton">
+                                    <input type="radio" name="payment-method">
+                                    <div class="img-pay">
+                                        <img src="./assets/img/payment/indomaret-1024x538.png" alt="indomaret logo">
+                                    </div>
+                                    <span>Indomaret</span>
+                                </button>
+                                <button class="pay" id="krediButton">
+                                    <input type="radio" name="payment-method">
+                                    <div class="img-pay">
+                                        <img src="./assets/img/payment/Logo Kredivo.png" alt="kredivo logo">
+                                    </div>
+                                    <span>Kredivo</span>
+                                </button>
+                                <button class="pay" id="atomeButton">
+                                    <input type="radio" name="payment-method">
+                                    <div class="img-pay">
+                                        <img src="./assets/img/payment/ic-gettheapp-logo@2x.png" alt="atome logo">
+                                    </div>
+                                    <span>Atome</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
+
+                    <div class="payment-method-mobile" id="payment-mobile">
+                        <h2>Payment Method</h2>
+                        <button id="select-btn">
+                            <div class="select-wrapper">
+                                <div id="select-img">
+                                    <i class="fa-solid fa-wallet"></i>
+                                </div>
+                                <span class="btn-text">Select Payment Method</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                    
+                        <div class="mobile-payment-wrapper">
+                            <div id="mobile-rec">
+                                <h3>Recommendation</h3>
+                                <div class="mobile-options">
+                                    <button class="mobile-opt">
+                                        <div class="img-pay">
+                                            <img src="./assets/img/payment/bank-central-asia-logo-bank-central-asia-bca-format-cdr-png-gudril-1.png" alt="logo bca">
+                                        </div>
+                                        <span>BCA Virtual Account</span>
+                                    </button>
+                                    <button class="mobile-opt">
+                                        <div class="img-pay">
+                                            <img src="./assets/img/payment/105-1051729_bank-negara-indonesia-logo-bank-bni-transparan-clipart.png" alt="logo bri">
+                                        </div>
+                                        <span>BRI Virtual Account</span>
+                                    </button>
+                                    <button class="mobile-opt">
+                                        <div class="img-pay">
+                                            <img src="./assets/img/payment/gopay.png" alt="logo gopay">
+                                        </div>
+                                        <span>GoPay</span>
+                                    </button>
+                                    <button class="mobile-opt">
+                                        <div class="img-pay">
+                                            <img src="./assets/img/payment/Logo Kredivo.png" alt="logo kredivo">
+                                        </div>
+                                        <span>Kredivo</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div id="mobile-ewallet">
+                                <h3>E-Wallet</h3>
+                                <div class="mobile-options">
+                                    <button class="mobile-opt">
+                                        <div class="img-pay">
+                                            <img src="./assets/img/payment/gopay.png" alt="logo gopay">
+                                        </div>
+                                        <span>GoPay</span>
+                                    </button>
+                                    <button class="mobile-opt">
+                                        <div class="img-pay">
+                                            <img src="./assets/img/payment/OVO.png" alt="logo ovo">
+                                        </div>
+                                        <span>OVO</span>
+                                    </button>
+                                    <button class="mobile-opt">
+                                        <div class="img-pay">
+                                            <img src="./assets/img/payment/Dana.png" alt="logo dana">
+                                        </div>
+                                        <span>Dana</span>
+                                    </button>
+                                    <button class="mobile-opt">
+                                        <div class="img-pay">
+                                            <img src="./assets/img/payment/shopeepay-logo-1762x350.png" alt="logo shopeepay">
+                                        </div>
+                                        <span>ShopeePay</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div id="mobile-card">
+                                <h3>Debit/Credit Card</h3>
+                                <div class="mobile-options">
+                                    <button class="mobile-opt" onclick="togglePopUp()" type="button" id="card-mobile-btn">
+                                        <div class="img-pay">
+                                            <img src="./assets/img/payment/credit-card.png" alt="">
+                                        </div>
+                                        <span>Debit/Credit Card</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div id="mobile-va">
+                                <h3>Virtual Account</h3>
+                                <div class="mobile-options">
+                                    <button class="mobile-opt">
+                                        <div class="img-pay">
+                                            <img src="./assets/img/payment/bank-central-asia-logo-bank-central-asia-bca-format-cdr-png-gudril-1.png" alt="bca logo">
+                                        </div>
+                                        <span>BCA Virtual Account</span>
+                                    </button>
+                                    <button class="mobile-opt">
+                                        <div class="img-pay">
+                                            <img src="./assets/img/payment/105-1051729_bank-negara-indonesia-logo-bank-bni-transparan-clipart.png" alt="bni logo">
+                                        </div>
+                                        <span>BNI Virtual Account</span>
+                                    </button>
+                                    <button class="mobile-opt">
+                                        <div class="img-pay">
+                                            <img src="./assets/img/payment/bri-logo-freelogovectors.net_.png" alt="bri logo">
+                                        </div>
+                                        <span>BRI Virtual Account</span>
+                                    </button>                    
+                                </div>
+                            </div>
+                            <div id="mobile-others">
+                                <h3>Others</h3>
+                                <div class="mobile-options">
+                                    <button class="mobile-opt">
+                                        <div class="img-pay">
+                                            <img src="./assets/img/payment/Alfamart-logo-1536x864.png" alt="alfamart logo">
+                                        </div>
+                                        <span>Alfamart</span>
+                                    </button>                    
+                                    <button class="mobile-opt">
+                                        <div class="img-pay">
+                                            <img src="./assets/img/payment/indomaret-1024x538.png" alt="indomaret logo">
+                                        </div>
+                                        <span>Indomaret</span>
+                                    </button>                    
+                                    <button class="mobile-opt">
+                                        <div class="img-pay">
+                                            <img src="./assets/img/payment/Logo Kredivo.png" alt="kredivo logo">
+                                        </div>
+                                        <span>Kredivo</span>
+                                    </button>                    
+                                    <button class="mobile-opt">
+                                        <div class="img-pay">
+                                            <img src="./assets/img/payment/ic-gettheapp-logo@2x.png" alt="atome logo">
+                                        </div>
+                                        <span>Atome</span>
+                                    </button>                    
+        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="right">
+                    <div class="order-summary">
+                        <h2>Order Summary</h2>
+                        <div class="sub-wrapper">
+                            <div class="sub">
+                                <span class="sub-title">Subtotal</span>
+                                <span class="sub-price">$10.00</span>
+                            </div>
+                            <div class="sub">
+                                <span class="sub-title">Shipping Cost</span>
+                                <span class="sub-price">$3.00</span>
+                            </div>
+                            <div class="sub">
+                                <span class="sub-title">Tax</span>
+                                <span class="sub-price">$1.00</span>
+                            </div>
+                
+                            <div class="total">
+                                <div class="total-wrap">
+                                    <span class="title">Total</span>
+                                    <span class="price">$14.00</span>
+                                </div>
+                                <button class="submit" id="submit-order" disabled>place order</button>
+                            </div>
+                        </div>
+                    </div>
             </section>
 
-        </form>
+        </section>
     </main>
 
     <footer>
@@ -437,5 +585,53 @@
     <div class="copy-right">
         <p>All Right Reversed @2024. Designed by Toronto Digital.</p>
     </div>
+    <section id="popup-card">
+        <div class="popup-title">
+            <h3>Add Debit/Credit Card</h3>
+            <i class="fa-solid fa-xmark" id="close" onclick="closePopUp()"></i>
+        </div>
+        <form action="#" class="card-mobile" id="card-mobile">
+            <div class="allowed">
+                <div class="img-bank">
+                    <img src="./assets/img/payment/Visa-Logo.png" alt="visa logo">
+                </div>
+                <div class="img-bank">
+                    <img src="./assets/img/payment/Mastercard-Logo.png" alt="mastercard logo">
+                </div>
+                <div class="img-bank">
+                    <img src="./assets/img/payment/jcb.png" alt="jcb logo">
+                </div>
+            </div>
+            <div class="card-num">
+                <label for="card-num">
+                    Card Number:
+                </label>
+                <input type="text" id="card-num-mobile" name="card-num" placeholder="Enter card number" required>
+                <p class="error-message" id="numError-mobile"></p>
+            </div>
+            <div class="card-info-wrapper">
+                <div class="card-expired">
+                    <label for="card-expired">
+                        Valid Until: 
+                    </label>
+                    <div class="expired-wrapper">
+                        <input type="text" id="card-month-mobile" placeholder="MM" required>
+                        <span> / </span>
+                        <input type="text" id="card-year-mobile" placeholder="YY" required>
+                    </div>
+                    <p class="error-message" id="expError-mobile"></p>
+                </div>
+                <div class="card-cvv">
+                    <label for="card-cvv">
+                        CVV:
+                    </label>
+                    <input type="password" id="card-cvv-mobile" placeholder="CVV" required>
+                    <p class="error-message" id="cvvError-mobile"></p>
+                </div>
+            </div>
+            <button id="submit-card" type="button" onclick="togglePopUp()" disabled>Confirm</button>
+        </form>
+    </section>
+    <div class="overlay" id="overlay"></div>
 </body>
 </html>
