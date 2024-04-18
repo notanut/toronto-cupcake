@@ -49,21 +49,19 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         deleteButton.addEventListener("click", () => {
-            // Remove the corresponding product when delete button is clicked
             qty--;
             if (select[index].checked) {
                 totalSum -= parseFloat(subtotals[index].textContent);
                 totalElement.textContent = totalSum;
             }
             const productToDelete = select[index].closest('.product');
-            productToDelete.style.display = 'none'; // Hide the product
-            select[index].checked = false; // Uncheck the checkbox
+            productToDelete.style.display = 'none'; 
+            select[index].checked = false; 
             calculateTotal();
-            checkEmptyShoppingBag(); // Check if shopping bag is empty after product removal
+            checkEmptyShoppingBag(); 
         });        
     });
 
-    // Function to calculate subtotal for a specific product
     function calculateSubtotal(index) {
         const priceValue = parseFloat(prices[index].textContent);
         const quantityValue = parseInt(quantities[index].textContent);
@@ -71,7 +69,6 @@ document.addEventListener("DOMContentLoaded", function() {
         subtotals[index].textContent = subtotal;
     }
 
-    // Function to calculate total sum of checked products
     function calculateTotal() {
         totalSum = 0;
         subtotals.forEach((subtotal, index) => {
@@ -82,7 +79,6 @@ document.addEventListener("DOMContentLoaded", function() {
         totalElement.textContent = totalSum;
     }
 
-    // Check if the shopping bag is empty and hide products and total sections
     function checkEmptyShoppingBag() {
         const products = document.querySelectorAll('.product');
         if (products.length === 0 || qty === 0) {
@@ -92,11 +88,10 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
     
-    // Function to display "Empty Shopping Bag"
     function displayEmptyShoppingBag() {
         const emptyBagHTML = `
             <div class="empty-bag">
-                <img src="assets/img/cart.gif" alt="cart" class="cart">
+                <img src="assets/img/shopping/cart.gif" alt="cart" class="cart">
                 <h2>Oops...</h2>
                 <h2>The cart is empty</h2>
                 <p>Go find the cupcake you like</p>
@@ -116,6 +111,5 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Call calculateTotal function initially to set the total based on initial quantities
     calculateTotal();
 });
