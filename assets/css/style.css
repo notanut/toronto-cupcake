@@ -301,12 +301,6 @@ header {
   .container {
     margin-inline: auto;
   }
-  .dropdown_group {
-    padding: 64px 0;
-    align-content: baseline;
-    row-gap: 20px;
-    text-align: center; /* Tengahkan dropdown_title */
-  }
 }
 
 /* css buat footer*/
