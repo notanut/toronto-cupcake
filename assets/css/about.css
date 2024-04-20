@@ -69,6 +69,8 @@ section{
     }
 
     .left img{
+        position: relative;
+        left: 0.5vw;
         width: 200px;
         height: 125px;
     }
