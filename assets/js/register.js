@@ -1,5 +1,5 @@
 // js buat register
-const inputs = document.querySelectorAll(".input-field");
+const inputs = document.querySelectorAll(".inputField");
 const toggle_btn = document.querySelectorAll(".toggle");
 const main = document.querySelector("main");
 const bullets = document.querySelectorAll(".bullets span");
@@ -28,7 +28,7 @@ function moveSlider() {
   images.forEach((img) => img.classList.remove("show"));
   currentImage.classList.add("show");
 
-  const textSlider = document.querySelector(".text-group");
+  const textSlider = document.querySelector(".textGroup");
   textSlider.style.transform = `translateY(${-(index - 1) * 2.2}rem)`;
 
   bullets.forEach((bull) => bull.classList.remove("active"));
