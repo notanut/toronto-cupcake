@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Get the quantity element
     const quantityElement = document.querySelector('.quantity');
 
+    // Get the reset button
+    const resetButton = document.querySelector('.quantity');
+
     // Initialize the quantity from localStorage if available, otherwise set it to 0
     let quantity = localStorage.getItem('cartQuantity') ? parseInt(localStorage.getItem('cartQuantity')) : 0;
     
@@ -24,6 +27,17 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.setItem('cartQuantity', quantity.toString());
         });
     });
+
+    resetButton.addEventListener('click', function() {
+        //Reset quantity to 0
+        quantity = 0;
+
+        //Update the quantity text
+        updateQuantityText();
+
+        //Remove the quantity from localStorage
+        localStorage.removeItem('cartQuantity');
+    })
 
     // Function to update the quantity text
     function updateQuantityText() {
