@@ -45,7 +45,7 @@ header {
   column-gap: 4px;
   font-style: italic;
   color: #f384a7;
-  font-weight: bold;
+  font-weight: 600;
   transition: color 0.3s;
 }
 .nav_logo img{
@@ -103,7 +103,7 @@ header {
     align-items: center;
     padding: 20px 10px;
     color: #000000;
-    font-weight: bold;
+    font-weight: 600;
     transition: background-color 0.3s;
 }
 .nav_link_afterLogin{
