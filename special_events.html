@@ -6,107 +6,96 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
       <link rel = "stylesheet" href = "./assets/css/menu.css">
-      <title>Toronto Cupcake Logo</title>
+      <title>Homepage</title>
    </head>
    <body>
-        <header class="header">
-            <nav class="nav container">
-                <div class="nav__data">
-                    <a href="#" class="nav__logo">
-                        <img src="./assets/img/cupcakeLogo.png" alt="Toronto Cupcake Logo" width="100px" height="100px"/> Toronto Cupcake
-                    </a>
-                    <div class="nav__toggle" id="nav-toggle">
-                        <i class="ri-menu-line nav__toggle-menu"></i>
-                        <i class="ri-close-line nav__toggle-close"></i>
-                    </div>
+    <header class="nav_header">
+        <nav class="nav container">
+            <div class="nav_data">
+                <a href="index.html" class="nav_logo">
+                    <img src="assets/img/menu/cupcakeLogo.png" alt="Toronto Cupcake Logo"/> Toronto Cupcake
+                </a>
+                <div class="nav_toggle" id="nav-toggle">
+                    <i class="ri-menu-line nav_toggle-menu"></i>
+                    <i class="ri-close-line nav_toggle-close"></i>
                 </div>
-                <!-- navbar-->
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li>
-                            <a href="#" class="nav__link">Home</a>
-                        </li>
+            </div>
+            <!-- nav menu muncul saat max width 1118-->
+            <div class="nav_menu" id="nav-menu">
+                <ul class="nav_list">
+                    <li>
+                        <a href="index.html" class="nav_link">Home</a>
+                    </li>
+                    <!--dropdown-->
+                    <li class="dropdown_item">   
+                        <!--dropdown buat menu asya -->
+                        <div class="nav_link dropdown_button">
+                            Shop <i class="ri-arrow-down-s-line dropdown_arrow"></i>
+                        </div>
 
-                        <!--dropdown-->
-                        <li class="dropdown__item">   
-                            <!--dropdown buat menu asya -->
-                            <div class="nav__link dropdown__button">
-                                Shop <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                            </div>
-
-                            <div class="dropdown__container">
-                                <div class="dropdown__content">
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="ri-flashlight-line"></i>
-                                        </div>
-
-                                        <a href="menu.html" class="dropdown__title">Always Available</a>
+                        <div class="dropdown_container">
+                            <div class="dropdown_content">
+                                <div class="dropdown_group">
+                                    <div class="dropdown_icon">
+                                        <i class="ri-cake-line"></i>
                                     </div>
-
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="ri-heart-3-line"></i>
-                                        </div>
-                                        <a href="holidays.html" class="dropdown__title">Holidays</a>
+                                    <span class="dropdown_title"><a href="menu.html">Always Available</a></span>
+                                </div>
+                                <div class="dropdown_group">
+                                    <div class="dropdown_icon">
+                                        <i class="ri-cake-3-line"></i>
                                     </div>
-
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="ri-book-mark-line"></i>
-                                        </div>
-                                        <a href="special_events.html" class="dropdown__title">Special Events</a>
+                                    <span class="dropdown_title"><a href="holidays.html">Holidays</a></span>
+                                </div>
+                                <div class="dropdown_group">
+                                    <div class="dropdown_icon">
+                                        <i class="ri-cake-2-line"></i>
                                     </div>
-
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="ri-file-paper-2-line"></i>
-                                        </div>
-                                        <a href="custom.html" class="dropdown__title">Custom</a>
+                                    <span class="dropdown_title"><a href="special_events.html">Special Events</a></span>
+                                </div>
+                                <div class="dropdown_group">
+                                    <div class="dropdown_icon">
+                                        <i class="ri-cake-2-fill"></i>
                                     </div>
-                                    <div class="dropdown__group">
-                                        <div class="dropdown__icon">
-                                            <i class="ri-file-paper-2-line"></i>
-                                        </div>
-                                        <a href="premium.html" class="dropdown__title">Premium</a>
+                                    <span class="dropdown_title"><a href="custom.html">Custom</a></span>
+                                </div>
+                                <div class="dropdown_group">
+                                    <div class="dropdown_icon">
+                                        <i class="ri-cake-3-fill"></i>
                                     </div>
+                                    <span class="dropdown_title"><a href="premium.html">Premium</a></span>
                                 </div>
                             </div>
-                        </li>
-
-                        <li>
-                            <a href="#" class="nav__link">About Us</a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav__link">Store Location</a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav__link">
-                                <div class="shopping">
-                                    <i class="fa-solid fa-cart-shopping"></i>
-                                </div>
-                                <span class="quantity">0</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="register.html" class="nav__link"><i class="fa-regular fa-user"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="about.html" class="nav_link">About Us</a>
+                    </li>
+                    <li>
+                        <a href="store.html" class="nav_link">Store Location</a>
+                    </li>
+                    <li>
+                        <a href="shopping.html" class="nav_link"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <span class="quantity">0</span>
+                    </li>
+                    <li>
+                        <a href="index.html" class="nav_link"><i class="ri-user-shared-line"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
       <main class = "main">
-        <!--buat konten shop-->
         <div class = "shop">
             <div class="shop__container">
-                <img src="./assets/img/banner.png" alt="shop img" class="shop__img">
+                <img src="./assets/img/menu/banner.png" alt="shop img" class="shop__img">
             </div>
             <div class = "shop__text">
                 <h1 class = "shop__title">Toronto Cupcake</h1>
                 <h2 class = "shop__subtitle">A cupcake shop in Toronto</h2>
             </div>
-            <img src="./assets/img/home__bg_1.png" alt="cupcake_1" class="shop__cupcake_1">
-            <img src="./assets/img/home__bg_2.png" alt="cupcake_2" class="shop__cupcake_2">
+            <img src="./assets/img/menu/home__bg_1.png" alt="cupcake_1" class="shop__cupcake_1">
+            <img src="./assets/img/menu/home__bg_2.png" alt="cupcake_2" class="shop__cupcake_2">
         </div>
 
         <div class="menu section" id="menu">
@@ -114,7 +103,7 @@
 
             <div class="menu__container container grid">
                 <article class="menu__card">
-                    <img src="./assets/img/Birthday_Standard_SE.jpg" alt="menu image" class="menu__card__img">
+                    <img src="./assets/img/menu/Birthday_Standard_SE.jpg" alt="menu image" class="menu__card__img">
                     <h3 class="menu__name">Birthday Cupcake</h3>
                     <span class="menu__desc">A celebration in a box, with colorful cupcakes topped with confetti</span>
                     <span class="menu__price">$20.00 - 28.00 half dozen | $38 - 50 dozen</span>
@@ -125,7 +114,7 @@
                 </article>
 
                 <article class="menu__card">
-                    <img src="./assets/img/BridalShower_Standard_SE.jpg" alt="menu image" class="menu__card__img">
+                    <img src="./assets/img/menu/BridalShower_Standard_SE.jpg" alt="menu image" class="menu__card__img">
                     <h3 class="menu__name">Bridal Shower Cupcake</h3>
                     <span class="menu__desc">Elegant floral cupcakes for showering the bride-to-be</span>
                     <span class="menu__price">$20.00 - 28.00 half dozen | $38 - 50 dozen</span>
@@ -136,7 +125,7 @@
                 </article>
 
                 <article class="menu__card">
-                    <img src="./assets/img/CrowdPleaser_Standard_SE.jpg" alt="menu image" class="menu__card__img">
+                    <img src="./assets/img/menu/CrowdPleaser_Standard_SE.jpg" alt="menu image" class="menu__card__img">
                     <h3 class="menu__name">Crowd Pleaser Cupcake</h3>
                     <span class="menu__desc">Classic flavors to satisfy every sweet tooth</span>
                     <span class="menu__price">$20.00 - 28.00 half dozen | $38 - 50 dozen</span>
@@ -149,31 +138,26 @@
             </div>
         </div>
       </main>
-      <footer>
-        <div class="footer__container">
+    <footer>
+        <div class="footer_container">
             <div class="container">
                 <div class="sec Aboutus">
                     <h2>About Us</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum excepturi laboriosam sit voluptatum, nemo atque nobis ducimus natus fugiat maxime magni iure hic sed velit, nihil consequatur in fuga animi!</p>
+                    <p>Discover our passion for delicious cupcakes! From classic flavors to creative delights, our team crafts each treat with love. Thank you for choosing us to sweeten your moments.</p>
                     <ul class="sci">
                         <li>
-                            <a href="#">
+                            <a href="https://www.facebook.com/">
                                 <i class="fa-brands fa-facebook-f"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="https://www.instagram.com/">
                                 <i class="fa-brands fa-instagram"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="https://twitter.com/">
                                 <i class="fa-brands fa-x-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa-brands fa-youtube"></i>
                             </a>
                         </li>
                     </ul>
@@ -182,22 +166,22 @@
                     <h2>Usefull Links</h2>
                     <ul>
                         <li>
-                            <a href="#">
+                            <a href="about.html">
                                 About
                             </a>
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <a href="#">
+                            <a href="menu.html">
                                 Shop
                             </a>
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <a href="#">
-                                Offline Store
+                            <a href="store.html">
+                                Store Location
                             </a>
                         </li>
                     </ul>
@@ -240,7 +224,7 @@
                             <span>
                                 <i class="fa-solid fa-phone"></i>
                             </span>
-                            <p><a href="#">+628444555</a></p>
+                            <p><a href="#">+1 844 455</a></p>
                         </li>
                     </ul>
                 </div>
@@ -248,9 +232,9 @@
         </div>
     </footer>
     <div class="copy-right">
-        <p>All Right Reversed @2024. Designed by Toronto Digital.</p>
+        <p>All Right Reversed @2024. Designed by Toronto Cupcake.</p>
     </div>
-      <script src = "./assets/js/add.js"></script>
-      <script src="./assets/js/menu.js"></script>
+        <script src = "assets/js/main.js"></script>
+        <script src = "assets/js/add.js"></script>
    </body>
 </html>

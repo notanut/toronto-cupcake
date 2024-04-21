@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let quantity = localStorage.getItem('cartQuantity') ? parseInt(localStorage.getItem('cartQuantity')) : 0;
     
     // Update the quantity text initially
-    quantityElement.textContent = quantity;
+    updateQuantityText();
 
     // Add event listener to each add to cart button
     addToCartButtons.forEach(button => {
@@ -18,23 +18,15 @@ document.addEventListener('DOMContentLoaded', function() {
             quantity++;
             
             // Update the quantity text
-            quantityElement.textContent = quantity;
+            updateQuantityText();
 
             // Store the updated quantity in localStorage
             localStorage.setItem('cartQuantity', quantity.toString());
         });
     });
 
-    // Add event listener to shopping cart button
-    const shoppingCartButton = document.querySelector('.fa-cart-shopping');
-    shoppingCartButton.addEventListener('click', function() {
-        // Reset quantity to 0
-        quantity = 0;
-
-        // Update the quantity text
+    // Function to update the quantity text
+    function updateQuantityText() {
         quantityElement.textContent = quantity;
-
-        // Remove quantity data from localStorage
-        localStorage.removeItem('cartQuantity');
-    });
+    }
 });
