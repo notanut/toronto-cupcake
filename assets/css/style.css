@@ -186,6 +186,9 @@ header {
 .dropdown_link:hover {
   color: #57256A;
 }
+.dropdown_title a{
+  color: #000;
+}
 .show-dropdown .dropdown_arrow {
   transform: rotate(180deg);
 }
