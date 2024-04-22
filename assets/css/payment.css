@@ -398,6 +398,14 @@ main .main-cont {
   transform: scale(1) translate(-50%, -50%);
 }
 
+input[type="text"]::placeholder, input[type="tel"]::placeholder, textarea::placeholder {
+  padding: 5px;
+}
+
+input, textarea {
+  padding: 3px;
+}
+
 
 #submit-card {
   width: 100%;
