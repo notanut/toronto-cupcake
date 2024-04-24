@@ -78,10 +78,10 @@ html {
   }
 }
 
-
+/* 
 body {
   font-family: "Nunito", sans-serif;
-}
+} */
 
 main {
     background: linear-gradient(to bottom, #FFE9F0, #DFD9FF);
@@ -114,7 +114,7 @@ main .main-cont {
 
 .order-wrapper {
   display: flex;
-  gap: 4vw;
+  gap: 2vw;
   align-items: center;
 }
 
@@ -292,6 +292,7 @@ main .main-cont {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 7px;
 }
 
 .card-info-wrapper > div {
@@ -356,6 +357,10 @@ main .main-cont {
   align-items: center;
 }
 
+label {
+  margin-bottom: 3px;
+}
+
 .submit {
   outline: none;
   border: none;
@@ -367,7 +372,7 @@ main .main-cont {
   border-radius: 10px;
   padding: .5rem;
   margin-top: .5rem;
-  transition: .3s all ease-in-out;
+  transition: .2s all ease-in-out;
   border: 1px solid #f384a7;
 }
 
@@ -574,8 +579,29 @@ input, textarea {
     padding-top: 17vw;
   }
 
+  .order-add {
+    font-size: 12.5px;
+  }
+
+  .order-qty {
+    font-size: 10px;
+  }
+
   .order-info-wrapper {
     max-width: 180px;
+  }
+
+  .order .img-container {
+    width: 60px;
+    height: 70px;
+  }
+
+  main .main-cont {
+    gap: 10px;
+  }
+
+  input[type="text"]::placeholder, input[type="tel"]::placeholder, textarea::placeholder {
+    padding: 1px 3px;
   }
 }
 
