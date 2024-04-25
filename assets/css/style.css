@@ -421,3 +421,17 @@ header {
     text-align: center;
   } 
 }
+
+.quantity {
+  background-color: red;
+  color: #FFFFFF;
+  font-size: 12px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  display: inline-block;
+  margin-left: 5px;
+  margin-top: 35px;
+}
