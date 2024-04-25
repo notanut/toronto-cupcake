@@ -187,7 +187,11 @@ function validatePhone() {
     if (!phone) {
         phoneError.textContent = 'Phone number is required'
         checkPhone = false
-    } else if (!/^\d{10,12}$/.test(phone)) {
+    } else if (!/^\+?\d+$/.test(phone)) {
+        phoneError.textContent = 'Phone number must be a number'
+        checkPhone = false
+    }
+     else if (!/^\d{10,12}$/.test(phone) && !/^\+\d{1,3}\d{9,11}$/.test(phone)) {
         phoneError.textContent = 'Phone number must be between 10 or 12 digits long'
         checkPhone = false
     } else {

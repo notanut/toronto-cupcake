@@ -38,7 +38,9 @@ section{
     button{
         margin-top: 5%;
         background-color: #f384a7;
-        border-style: none;
+        box-shadow: 1px 1px 10px -4px rgba(0,0,0,.2);
+        border: 1px solid #f384a7;
+        transition: 0.2s;
         color: white;
         border-radius: 1.3em;
         width: 280px;
@@ -49,7 +51,6 @@ section{
         background-color: white;
         color: #f384a7;
         cursor: pointer;
-        box-shadow: 0px 3px 3px black;
     }
 }
 
@@ -73,7 +74,7 @@ h1{
 .product{
     width: 45vw;
     height: 12vw;
-    border: 1px solid black;
+    box-shadow: 1px 1px 10px -4px rgba(0,0,0,.2);
     border-radius: 2vw;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -110,6 +111,11 @@ h1{
     cursor: pointer;
 }
 
+.left{
+    width: 200px;
+    height: 12vw;
+}
+
 .left img{
     width: 8.25vw;
     height: 8.7vw;
@@ -137,6 +143,7 @@ h1{
 
 .buttons span.material-symbols-outlined{
     color: rgb(83, 83, 83);
+    transition: 0.2s;
 }
 
 
@@ -155,8 +162,8 @@ h1{
 
 .buttons{
     padding-right: 5%;
-    height: 3vw;
-    width: 11vw;
+    height: 35px;
+    width: 140px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -166,31 +173,33 @@ h1{
 }
 
 .minus, .plus{
-    border: 1px solid black;
     border-radius: 50%;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 3vw;
-    height: 3vw;
+    font-size: 25px;
+    transition: 0.2s;
 }
 
+.minus{
+    box-shadow: 1px 1px 10px -4px rgba(0,0,0,.2);
+    border: 1px solid #f384a7;
+    color: #f384a7;
+}
 .plus:hover{
     color: #f384a7;
     background-color: white;
-    border: 1px solid black;
 }
 
 .minus:hover{
     background-color: #f384a7;
     color: white;
-    border-style: none;
 }
 
 .buttons span{
-    width: 3vw;
-    height: 3vw;
+    width: 35px;
+    height: 35px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -211,12 +220,13 @@ h1{
 
 .plus{
     background-color: #f384a7;
-    border-style: none;
+    box-shadow: 1px 1px 10px -4px rgba(0,0,0,.2);
+    border: 1px solid #f384a7;
     color: white;
 }
 
 .sub{
-    border: 1px solid black;
+    box-shadow: 1px 1px 10px -4px rgba(0,0,0,.2);
     border-radius: 2vw;
     display: grid;
     grid-template-columns: 1fr;
@@ -274,23 +284,31 @@ h1{
     width: 13vw;
     height: 3.2vw;
     border-radius: 2vw;
-    border-style: none;
     background-color: #f384a7;
+    box-shadow: 1px 1px 10px -4px rgba(0,0,0,.2);
+    border: 1px solid #f384a7;
     color: white;
     font-size: 1.3vw;
+    transition: 0.2s;
 }
 
 .checkout:hover{
     background-color: white;
     color: #f384a7;
     cursor: pointer;
-    box-shadow: 0px 3px 3px black;
+    /* box-shadow: 0px 3px 3px black; */
 }
 
 .text{
     position: relative;
     top: 0.8vw;
     left: 1.4vw;
+}
+
+@media only screen and (max-width: 1020px) {
+    .left{
+        width: 110px;
+    }
 }
 
 @media only screen and (max-width: 820px) {
@@ -323,8 +341,8 @@ h1{
     .product{
         border-radius: 0;
         border-style: none;
-        width: 100vw;
-        height: 24vw;
+        width: 100%;
+        height: 190px;
         box-shadow: 0px 10px 10px 1px rgb(161, 158, 158);
         h2{
             font-size: 16px;
@@ -332,6 +350,9 @@ h1{
         p{
             font-size: 14px;
         }
+    }
+    .left{
+        width: 145px;
     }
     .left img{
         width: 15.5vw;
@@ -496,14 +517,14 @@ h1{
 }
 
 
-@media only screen and (max-width: 255px){
+@media only screen and (max-width: 290px){
     .product{
         height: 70vw;
     }
 
 }
 
-@media only screen and (max-width: 210px){
+@media only screen and (max-width: 250px){
     .product{
         height: 80vw;
     }
