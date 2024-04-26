@@ -422,11 +422,40 @@ header {
   } 
 }
 
-.main {
+.shop_quantity {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.quantity {
+  background-color: red;
+  color: #FFFFFF;
+  font-size: 12px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  display: inline-block;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 1118px){
+  .quantity {
+    margin-bottom: 10px;
+    margin-right: 8px;
+  }
+}
+
+main {
   background-color: #dfd9ff;
   color: #000000;
-  max-width: 100%;
+  width: 100%;
   max-height: max-content;
+  padding: 0;
+  margin: 0;
 }
 
 .shop {
@@ -447,18 +476,18 @@ header {
 }
 
 .shop__container {
-  max-width: 50%;
+  max-width: 100%;
   padding: 20px;
 }
 
 .shop__text {
-  max-width: 50%; /* Adjust the width as needed */
+  max-width: 50%;
   padding: 20px;
 }
 
 .shop__img {
   max-width: 100%;
-  width: 400px;
+  max-width: 400px;
 }
 
 .shop__title {
@@ -479,6 +508,8 @@ header {
 }
 
 .shop__cupcake_1{
+  margin: 0;
+  padding: 0;
   width: 150px;
   top: 8rem;
   left: -1rem;
@@ -501,10 +532,16 @@ header {
   margin-inline: 0rem;
   padding-block: 0;
   padding-inline: 0;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+.section__title{
+  padding-top: 0;
 }
 
 .menu__container {
+  padding-top: 0;
   padding: 4rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -512,6 +549,7 @@ header {
   row-gap: 5.5rem;
   column-gap: 4rem;
   z-index: 0;
+  max-height: max-content;
 }
 
 .menu__card {
@@ -526,7 +564,7 @@ header {
 }
 
 .menu__card__img {
-  width: 300px;
+  max-width: 300px;
   position: relative;
   inset: 0;
   top: -2.5rem;
@@ -586,6 +624,8 @@ body {
   max-width: 480px;
   height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
   .shop {
@@ -593,7 +633,7 @@ body {
   }
 
   .shop__container {
-    max-width: 40%;
+    max-width: 100%;
   }
 
   .shop__img {
@@ -609,16 +649,18 @@ body {
   }
 
   .menu {
-    padding-bottom: 1000px;
+    padding-bottom: 0;
     row-gap: 10px;
+    height: fit-content;
   }
 
   .menu__container {
+    padding-top: 0;
     grid-template-columns: repeat(1, 1fr);
     row-gap: 3rem;
     column-gap: 2rem;
-    width: 90%; 
-    height: 50%;
+    width: 100%; 
+    height: 100%;
   }
 }
 
@@ -635,16 +677,15 @@ body {
   }
 
   .shop__container {
-    max-width: 60%;
+    max-width: 100%;
   }
 
   .shop__img {
     width: 70%;
   }
 
-  .menu {
-    max-width: 100%;
-    padding-bottom: 600px;
+  .section__title {
+    padding-top: 50vh;
   }
 
   .menu__card {
@@ -652,11 +693,12 @@ body {
   }
 
   .menu__container {
+    padding-top: 0;
     grid-template-columns: repeat(1, 1fr);
     row-gap: 3rem;
     column-gap: 2rem;
-    width: 70%;
-    height: 70%;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -680,30 +722,12 @@ body {
     width: 80%;
   }
 
-  .menu {
-    padding-bottom: 300px;
-  }
-
   .menu__container {
+    padding-top: 0;
     grid-template-columns: repeat(2, 1fr);
     row-gap: 3rem;
     column-gap: 2rem;
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
   }
 }
-
-.quantity {
-  background-color: red;
-  color: #FFFFFF;
-  font-size: 12px;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
-  text-align: center;
-  display: inline-block;
-  margin-left: 5px;
-  margin-top: 35px;
-}
-
