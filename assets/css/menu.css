@@ -563,6 +563,11 @@ main {
   margin-top: 2rem;
 }
 
+.menu__card a{
+  text-decoration: none;
+  color: #000;
+}
+
 .menu__card__img {
   max-width: 300px;
   position: relative;
