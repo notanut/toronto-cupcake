@@ -103,15 +103,14 @@
                 <img src="./assets/img/menu/banner.png" alt="shop img" class="shop__img">
             </div>
             <div class = "shop__text">
-                <h1 class = "shop__title">Toronto Cupcake</h1>
-                <h2 class = "shop__subtitle">A cupcake shop in Toronto</h2>
+                <h1 class = "shop__title">ALWAYS AVAILABLE'S CUPCAKES</h1>
+                <h2 class = "shop__subtitle">Timeless delight, always at hand for a sweet boost</h2>
             </div>
             <img src="./assets/img/menu/home__bg_1.png" alt="cupcake_1" class="shop__cupcake_1">
             <img src="./assets/img/menu/home__bg_2.png" alt="cupcake_2" class="shop__cupcake_2">
         </div>
 
         <div class="menu">
-            <h2 class="section__title">Always Available Cupcake</h2>
 
             <div class="menu__container">
                 <article class="menu__card">
@@ -120,7 +119,7 @@
                     <span class="menu__desc">Cream-frosted delight with cookie crumbles for a playful treat</span>
                     <span class="menu__price">$3.75</span>
 
-                    <button class="menu__button">
+                    <button onclick="showToast()" class="menu__button">
                         <i class="ri-shopping-bag-line"></i>
                     </button>
                 </article>
@@ -131,10 +130,9 @@
                     <span class="menu__desc">Zesty lemon-infused treat for a burst of sunshine</span>
                     <span class="menu__price">$3.75</span>
 
-                    <button class="menu__button">
+                    <button onclick="showToast()" class="menu__button">
                         <i class="ri-shopping-bag-line"></i>
                     </button>
-
                 </article>
 
                 <article class="menu__card">
@@ -143,7 +141,7 @@
                     <span class="menu__desc">Fun and flavorful cupcakes with vibrant sprinkles</span>
                     <span class="menu__price">$3.75</span>
 
-                    <button class="menu__button">
+                    <button onclick="showToast()" class="menu__button">
                         <i class="ri-shopping-bag-line"></i>
                     </button>
                 </article>
@@ -154,7 +152,7 @@
                     <span class="menu__desc">Classic flavors for a nostalgic treat</span>
                     <span class="menu__price">$3.75</span>
 
-                    <button class="menu__button">
+                    <button onclick="showToast()" class="menu__button">
                         <i class="ri-shopping-bag-line"></i>
                     </button>
                 </article>
@@ -166,7 +164,7 @@
                         <span class="menu__desc">Juicy berry goodness in every bite</span>
                         <span class="menu__price">$3.75</span>
     
-                        <button class="menu__button">
+                        <button onclick="showToast()" class="menu__button">
                             <i class="ri-shopping-bag-line"></i>
                         </button>
                     </a>
@@ -178,10 +176,9 @@
                     <span class="menu__desc">Decadent triple threat of chocolate delight</span>
                     <span class="menu__price">$3.75</span>
 
-                    <button class="menu__button">
+                    <button onclick="showToast()" class="menu__button">
                         <i class="ri-shopping-bag-line"></i>
                     </button>
-
                 </article>
 
             </div>
@@ -283,7 +280,8 @@
     <div class="copy-right">
         <p>All Right Reversed @2024. Designed by Toronto Cupcake.</p>
     </div>
-      <script src = "assets/js/main.js"></script>
-      <script src = "assets/js/add.js"></script>
+    <div id="toast__box"></div>
+    <script src = "assets/js/main.js"></script>
+    <script src = "assets/js/add.js"></script>
    </body>
 </html>

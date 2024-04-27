@@ -479,7 +479,7 @@ main {
 }
 
 .cupcake_detail img {
-  width: 500px;
+  max-width: 500px;
   border-radius: 5%;
   box-shadow: 1px 1px 10px -4px rgba(0,0,0,.2);
 }
@@ -507,6 +507,7 @@ main {
   text-decoration: none;
   color: #ffffff;
   text-shadow: 2px 2px 5px #d5d5d6;
+  font-size: 15px;
 }
 
 .add_button:hover,
@@ -528,4 +529,152 @@ main {
 .cupcake_detail_price {
   font-size: 20px;
   font-weight: 1000;
+}
+
+#toast__box {
+  position: fixed;
+  top: 100px;
+  right: 5px;
+  display: none;
+  align-items: flex-end;
+  flex-direction: column;
+  overflow: hidden;
+  /* padding: 20px; */
+  margin-bottom: 100px;
+}
+
+.toast {
+  background-color: #f384a7;
+  border-radius: 30px;
+  color: #fff;
+  box-shadow: 1px 1px 5px rgba(0,0,0,.2);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .cupcake_detail img {
+    max-width: 300px;
+  }
+
+  .cupcake_detail_title{
+    font-size: 30px;
+  }
+
+  .cupcake_detail_description{
+    font-size: 15px;
+  }
+
+  .cupcake_detail_price{
+    font-size: 15px;
+  }
+
+  .add_button, .check_out_button {
+    font-size: 10px;
+    padding: .75rem;
+    border-radius: 15px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .cupcake_detail_image {
+    padding: 3rem;
+  }
+
+  .cupcake_detail_info {
+    padding: 3rem;
+  }
+
+  .cupcake_detail_title {
+    font-size: 25px;
+  }
+
+  .cupcake_detail_description {
+    font-size: 10px;
+  }
+
+  .cupcake_detail_price {
+    font-size: 10px;
+  }
+
+  #toast__box {
+    top: 100px
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .cupcake_detail_image {
+    padding: 2rem;
+  }
+
+  .cupcake_detail img {
+    max-width: 200px;
+  }
+
+  .cupcake_detail_info {
+    padding: 2rem;
+  }
+
+  .cupcake_detail_title {
+    font-size: 20px;
+  }
+
+  .cupcake_detail_description {
+    font-size: 10px;
+  }
+
+  .cupcake_detail_price {
+    font-size: 10px;
+  }
+
+  .add_button, .check_out_button {
+    font-size: 8px;
+    padding: .75rem;
+    border-radius: 15px;
+  }
+
+  #toast__box {
+    top: 90px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .cupcake_detail {
+    display: flex;
+    flex-direction: column;
+    column-gap: 10px;
+    align-items: center;
+  }
+
+  .cupcake_detail_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .cupcake_detail_info {
+    padding-top: 0;
+  }
+
+  .cupcake_detail_title {
+    text-align: center;
+    font-size: 10px;
+  }
+
+  .cupcake_detail_description {
+    font-size: 10px;
+    text-align: center;
+  }
+
+  #toast__box {
+    top: 80px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .cupcake_detail img {
+    width: 150px;
+    border-radius: 10px;
+  }
 }

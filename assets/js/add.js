@@ -8,9 +8,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Get the reset button
     const resetButton = document.querySelector('.quantity');
 
+    // Get the toast box
+    const toastBox = document.getElementById('toast__box');
+
     // Initialize the quantity from localStorage if available, otherwise set it to 0
     let quantity = localStorage.getItem('cartQuantity') ? parseInt(localStorage.getItem('cartQuantity')) : 0;
-    
+
     // Update the quantity text initially
     updateQuantityText();
 
@@ -19,12 +22,15 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function() {
             // Increase the quantity by 1
             quantity++;
-            
+
             // Update the quantity text
             updateQuantityText();
 
             // Store the updated quantity in localStorage
             localStorage.setItem('cartQuantity', quantity.toString());
+
+            // Show the toast notification
+            showToast();
         });
     });
 
@@ -42,5 +48,27 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to update the quantity text
     function updateQuantityText() {
         quantityElement.textContent = quantity;
+    }
+
+    // Function to show the toast notification
+    function showToast() {
+        // Show the toast box
+        toastBox.style.display = 'flex';
+
+        // Create and append the toast element
+        let toast = document.createElement('div');
+        toast.classList.add('toast');
+        toast.textContent = 'Cupcake added to cart';
+
+        toastBox.appendChild(toast);
+
+        // Remove the toast after a delay
+        setTimeout(() => {
+            toastBox.removeChild(toast);
+            // Hide the toast box when no toast left
+            if (toastBox.children.length === 0) {
+                toastBox.style.display = 'none';
+            }
+        }, 3000);
     }
 });

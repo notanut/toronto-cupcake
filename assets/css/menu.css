@@ -466,10 +466,8 @@ main {
   margin-left: 0;
   margin-right: 0;
   padding-right: 0;
-  margin-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
-  grid-row: span;
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
@@ -482,7 +480,7 @@ main {
 
 .shop__text {
   max-width: 50%;
-  padding: 20px;
+  padding: 1rem;
 }
 
 .shop__img {
@@ -494,12 +492,14 @@ main {
   font-size: 50px;
   font-family: "Helvetica Neue", serif;
   margin-bottom: 1rem;
+  font-style: italic;
+  text-shadow: 2px 3px 40px #4F5563;
 }
 
 .shop__subtitle {
   padding: 0 1rem;
   margin-bottom: 2.5rem;
-  font-family: "Nunito",serif;
+  font-family: "Nunito";
 }
 
 .shop__cupcake_1, .shop__cupcake_2{
@@ -518,13 +518,13 @@ main {
 
 .shop__cupcake_2{
   width: 15vw;
-  right: 1rem;
+  right: 2.5rem;
   bottom: 1rem;
   transform: rotate(-15deg);
 }
 
 .menu {
-  background-color: transparent;
+  background-color: #dfd9ff;
   position: relative;
   padding-top: 90px;
   display: grid;
@@ -534,10 +534,7 @@ main {
   padding-inline: 0;
   padding-bottom: 20px;
   width: 100%;
-}
-
-.section__title{
-  padding-top: 0;
+  margin-top: 100px;
 }
 
 .menu__container {
@@ -555,7 +552,7 @@ main {
 .menu__card {
   position: relative;
   background-color: #fbf5ff;
-  padding: 7rem 2rem 3rem;
+  padding: 5rem 2rem 3rem;
   box-shadow: 0 8px 20px hsla(19, 64%, 48%,.08);
   border-radius: 1rem;
   text-align: center;
@@ -623,6 +620,28 @@ main {
   transform: translateY(-.50rem);
 }
 
+
+#toast__box {
+  position: fixed;
+  top: 100px;
+  right: 5px;
+  display: none;
+  align-items: flex-end;
+  flex-direction: column;
+  overflow: hidden;
+  /* padding: 20px; */
+  margin-bottom: 100px;
+}
+
+.toast {
+  background-color: #f384a7;
+  border-radius: 30px;
+  color: #fff;
+  box-shadow: 1px 1px 5px rgba(0,0,0,.2);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
 /* Small devices (e.g., phones) */
 @media screen and (max-width: 480px) {
 body {
@@ -635,6 +654,13 @@ body {
 
   .shop {
     max-width: 100%;
+    margin-bottom: 0;
+  }
+
+  .shop__cupcake_2 {
+    width: 30vw;
+    right: 1.5rem;
+    overflow: hidden;
   }
 
   .shop__container {
@@ -657,6 +683,7 @@ body {
     padding-bottom: 0;
     row-gap: 10px;
     height: fit-content;
+    margin-top: 0;
   }
 
   .menu__container {
@@ -666,13 +693,28 @@ body {
     column-gap: 2rem;
     width: 100%; 
     height: 100%;
+    margin: 0;
+    padding: 3rem;
+  }
+
+  .menu__card {
+    max-width: max-content;
+    width: 100%;
+  }
+
+  .menu__container img {
+    width: 180px
+  }
+
+  #toast__box {
+    top: 80px;
   }
 }
 
 /* Medium devices (e.g., tablets) */
 @media screen and (min-width: 481px) and (max-width: 850px) {
   body {
-    max-width: 768px;
+    max-width: 850px;
     height: 100%;
     width: 100%;
   }
@@ -685,12 +727,17 @@ body {
     max-width: 100%;
   }
 
+  .shop__cupcake_2{
+    width: 15vw;
+    right: 7rem;
+  }
+
   .shop__img {
     width: 70%;
   }
 
   .section__title {
-    padding-top: 50vh;
+    padding-top: 0;
   }
 
   .menu__card {
@@ -698,12 +745,19 @@ body {
   }
 
   .menu__container {
+    max-width: max-content;
     padding-top: 0;
     grid-template-columns: repeat(1, 1fr);
     row-gap: 3rem;
     column-gap: 2rem;
     width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  #toast__box {
+    top: 90px;
   }
 }
 
@@ -734,5 +788,26 @@ body {
     column-gap: 2rem;
     width: 100%;
     height: 100%;
+    padding: 1rem;
+  }
+
+  .menu__card {
+    max-width: 500px;
+    width: 100%;
+    padding-top: 5rem;;
+  }
+
+  .menu__container img {
+    width: 250px;
+  }
+
+  #toast__box {
+    top: 100px
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 890px) {
+  .menu__container img{
+    width: 300px;
   }
 }

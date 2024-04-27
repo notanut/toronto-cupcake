@@ -103,15 +103,14 @@
                 <img src="./assets/img/menu/banner.png" alt="shop img" class="shop__img">
             </div>
             <div class = "shop__text">
-                <h1 class = "shop__title">Toronto Cupcake</h1>
-                <h2 class = "shop__subtitle">A cupcake shop in Toronto</h2>
+                <h1 class = "shop__title">HOLIDAY'S CUPCAKES</h1>
+                <h2 class = "shop__subtitle">Seasonal joy in every bite, tailored for festive celebrations</h2>
             </div>
             <img src="./assets/img/menu/home__bg_1.png" alt="cupcake_1" class="shop__cupcake_1">
             <img src="./assets/img/menu/home__bg_2.png" alt="cupcake_2" class="shop__cupcake_2">
         </div>
 
         <div class="menu section" id="menu">
-            <h2 class="section__title">Holidays Cupcake</h2>
 
             <div class="menu__container container grid">
                 <article class="menu__card">
@@ -120,7 +119,7 @@
                     <span class="menu__desc">Spooky-sweet cupcakes for Halloween fun</span>
                     <span class="menu__price">$3.75 - 5.00 each | $20.00 - 28.00 half dozen | $38 - 50 dozen</span>
 
-                    <button class="menu__button">
+                    <button onclick="showToast()" class="menu__button">
                         <i class="ri-shopping-bag-line"></i>
                     </button>
                 </article>
@@ -131,7 +130,7 @@
                     <span class="menu__desc">Festive flavors with edible glitter for holiday cheer</span>
                     <span class="menu__price">$3.75 - 5.00 each | $20.00 - 28.00 half dozen | $38 - 50 dozen</span>
 
-                    <button class="menu__button">
+                    <button onclick="showToast()" class="menu__button">
                         <i class="ri-shopping-bag-line"></i>
                     </button>
                 </article>
@@ -142,7 +141,7 @@
                     <span class="menu__desc">Decadent cupcakes adorned with delicate florals</span>
                     <span class="menu__price">$3.75 - 5.00 each | $20.00 - 28.00 half dozen | $38 - 50 dozen</span>
 
-                    <button class="menu__button">
+                    <button onclick="showToast()" class="menu__button">
                         <i class="ri-shopping-bag-line"></i>
                     </button>
                 </article>
@@ -246,6 +245,7 @@
     <div class="copy-right">
         <p>All Right Reversed @2024. Designed by Toronto Cupcake.</p>
     </div>
+    <div id="toast__box"></div>
         <script src = "assets/js/main.js"></script>
         <script src = "assets/js/add.js"></script>
    </body>
