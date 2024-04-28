@@ -76,6 +76,12 @@ header {
 .nav_toggle-close {
   opacity: 0;
 }
+
+.fa-cart-shopping:before, .fa-shopping-cart:before {
+  content: "\f07a";
+  color: #000;
+}
+
 @media screen and (max-width: 1118px) {
     .nav_menu {
       position: absolute;

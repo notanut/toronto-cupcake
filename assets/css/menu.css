@@ -193,6 +193,11 @@ header {
   transform: rotate(180deg);
 }
 
+.fa-cart-shopping:before, .fa-shopping-cart:before {
+  content: "\f07a";
+  color: #000;
+}
+
 /*breakpoint*/
 /*buat small devices */
 @media screen and (max-width: 300px) {
