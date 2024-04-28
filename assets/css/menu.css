@@ -788,7 +788,7 @@ body {
 
   .menu__container {
     padding-top: 0;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     row-gap: 3rem;
     column-gap: 2rem;
     width: 100%;
