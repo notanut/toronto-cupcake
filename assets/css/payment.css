@@ -476,6 +476,10 @@ input, textarea {
   color: #555;
 }
 
+.error-message {
+  height: 1rem;
+}
+
 @media screen and (max-width: 768px) {
 
   .payment-method-mobile, #select-btn {
@@ -526,9 +530,7 @@ input, textarea {
     width: 50px;
   }
 
-  .error-message {
-    height: 1rem;
-  }
+  
 
   .mobile-options {
     display: flex;

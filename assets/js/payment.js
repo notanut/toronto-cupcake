@@ -170,9 +170,6 @@ function validateName() {
     if (!name) {
         nameError.textContent = 'Name is required'
         checkName = false
-    } else if (name.length < 5) {
-        nameError.textContent = 'Name must be at least 5 characters'
-        checkName = false
     } else {
         nameError.textContent = ''
         checkName = true
