@@ -1275,8 +1275,8 @@ header {
   }
 
   .square{
-    left: 50%;
-    transform: translate(-50%);
+    /* left: 50%;
+    transform: translate(-50%); */
     height: 20vw;
     width: 50vw;
     margin: 5vw;
@@ -1397,8 +1397,8 @@ header {
   }
 
   .square{
-    left: 50%;
-    transform: translate(-50%);
+    /* left: 50%; */
+    /* transform: translate(-50%); */
     height: 30vw;
     width: 50vw;
     margin: 5vw;
@@ -1453,12 +1453,12 @@ header {
   }
 }
 
-@media only screen and (max-width: 431px){
+/* @media only screen and (max-width: 431px){
   .square{
     margin-left: 50%;
     transform: translate(-50%);
   }
-}
+} */
 
 @media only screen and (max-width: 420px){
   .container1{
