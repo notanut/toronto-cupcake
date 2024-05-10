@@ -248,7 +248,7 @@ header {
   }
   .dropdown_content {
     justify-content: center;
-    grid-template-columns: repeat(5, max-content);
+    grid-template-columns: repeat(6, max-content);
     column-gap: 100px;
     max-width: 1120px;
     margin-inline: auto;
@@ -506,6 +506,7 @@ main {
 
 .add_button,
 .check_out_button {
+  cursor: pointer;
   background-color: #f384a7;
   padding: 1rem;
   border-radius: 20px;
