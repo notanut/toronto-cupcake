@@ -480,3 +480,15 @@ function togglePopUp(){
         selectImg.appendChild(newI)
     }
 }
+
+function checkout(){
+    var overlay = document.getElementById('overlay')
+    overlay.classList.toggle('pop-active')
+    var checkPop = document.getElementById('payment-succeed')
+    checkPop.classList.toggle('check')
+}
+
+function backHome(){
+    checkout()
+    window.location.href = '/index.html'
+}

@@ -480,6 +480,52 @@ input, textarea {
   height: 1rem;
 }
 
+.payment-succeed {
+  position: fixed;
+  background-color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  transform-origin: 0;
+  max-width: 680px;
+  width: 300px;
+  transform: scale(0);
+  min-width: 240px;
+}
+
+#back-home {
+  background-color: #f384a7;
+  color: white;
+  outline: none;
+  border: 1px solid #f384a7;
+  padding: 5px 10px;
+  border-radius: 7.5px;
+  margin-top: .5rem;
+  cursor: pointer;
+  transition: .3s all ease-in-out;
+
+  h3 {
+    margin: 0;
+  }
+}
+
+#back-home:hover {
+  background-color: white;
+  color: #f384a7;
+}
+
+.payment-succeed.check {
+  transform: scale(1) translate(-50%, -50%);
+}
+
 @media screen and (max-width: 768px) {
 
   .payment-method-mobile, #select-btn {
@@ -563,6 +609,9 @@ input, textarea {
   h3 {
     font-size: 1rem;
     margin: .75rem 0;
+  }
+  .payment-succeed h3 {
+    margin: 0;
   }
   #popup-card h3 {
     margin: 5px 0;
