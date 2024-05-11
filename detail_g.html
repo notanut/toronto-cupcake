@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/shopping.css">
-    <link rel = "stylesheet" href = "assets/css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
-    <title>Shopping Cart</title>
-</head>
-<body>
+   <html lang = "en">
+   <head>
+      <meta charset = "UTF-8">
+      <meta name = "viewport" content = "width=device-width, initial-scale=1.0">   
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+      <link rel = "stylesheet" href = "assets/css/detail.css">
+      <title>Detail Page</title>
+   </head>
+   <body>
     <header class="nav_header">
         <nav class="nav container">
             <div class="nav_data">
@@ -107,90 +105,28 @@
             </div>
         </nav>
     </header>
-    <section id="shopping-section">
-        <center><h1>Shopping Cart</h1></center>
-        <div class="contain">
-            <div class="products">
-                <div class="selectAll_text">
-                    <input type="checkbox" id="selectAll"><strong>Select All</strong>
-                </div>
-                <div class="product_section">
-                    <div class="product">
-                        <div class="left">
-                            <input type="checkbox" class="product-checkbox">
-                            <img src="assets/img/shopping/cupcake1.jpg" alt="Cupid's Kiss">
-                        </div>
-                        <div class="mid">
-                            <h2>Cookie Monster</h2>
-                            <p>Cream-frosted with cookie crumbles for a playful treat</p>
-                            <p class="price">3.75</p>
-                        </div>
-                        <div class="right">
-                            <strong>$ <span class="subtotal">3.75</p></strong>
-                            <div class="buttons">
-                                <span class="material-symbols-outlined" style="font-size: 20px;" >delete</span>
-                                <span class="minus">-</span>
-                                <span class="num" style="font-size: 18px;">1</span>
-                                <span class="plus">+</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="left">
-                            <input type="checkbox" class="product-checkbox">
-                            <img src="assets/img/shopping/cupcake2.jpg" alt="ogghe">
-                        </div>
-                        <div class="mid">
-                            <h2>Lemon Drop</h2>
-                            <p>Lemon Drop</p>
-                            <p class="price">3.75</p>
-                        </div>
-                        <div class="right">
-                            <strong>$ <span class="subtotal">3.75</p></strong>
-                            <div class="buttons">
-                                <span class="material-symbols-outlined" style="font-size: 20px;" >delete</span>
-                                <span class="minus">-</span>
-                                <span class="num" style="font-size: 18px;">1</span>
-                                <span class="plus">+</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <div class="left">
-                            <input type="checkbox" class="product-checkbox">
-                            <img src="assets/img/shopping/cupcake3.jpg" alt="ogghe">
-                        </div>
-                        <div class="mid">
-                            <h2>Gingerbread</h2>
-                            <p>Seasonal favorite with gingerbread crumbles</p>
-                            <p class="price">5.00</p>
-                        </div>
-                        <div class="right">
-                            <strong>$ <span class="subtotal">5.00</p></strong>
-                            <div class="buttons">
-                                <span class="material-symbols-outlined" style="font-size: 20px;" >delete</span>
-                                <span class="minus">-</span>
-                                <span class="num" style="font-size: 18px;">1</span>
-                                <span class="plus">+</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <main>
+        <div class="cupcake_detail">
+            <div class="cupcake_detail_image">
+                <img src="assets/img/menu/Gingerbread_Standard_PR.jpg" alt="cupcake1">
             </div>
-            <div class="sub">
-                <div class="sub_text">
-                    <div class="text">
-                        <h2>Subtotal</h2>
-                        <p>Not including tax and other fees</p>
-                    </div>
-                    <div class="total_text">
-                        <strong>$ <span class="total">0</p></strong>
-                    </div>
+            <div class="cupcake_detail_info">
+                <div class="cupcake_detail_title">
+                    <h1>Gingerbread Cupcake</h1>
                 </div>
-                <a href="payment.html"><button class="checkout" id="checkout"disabled>CHECKOUT</button></a>
+                <div class="cupcake_detail_description">
+                    <p>Embrace the warmth of the season with our Gingerbread Cupcake. Infused with aromatic spices and adorned with gingerbread crumbles, this seasonal favorite is a cozy embrace in dessert form. Close your eyes, breathe in the fragrant aroma, and let the taste of tradition transport you to a winter wonderland of sweet delights.</p>
+                </div>
+                <div class="cupcake_detail_price">
+                    <p>Price: $5.00</p>
+                </div>
+                <div class="detail_button">
+                    <div onclick="showToast()" class="add_button">ADD TO CART</div>
+                    <div class="check_out_button" href="shopping.html">CHECK OUT</div>    
+                </div>          
             </div>
         </div>
-    </section>
+      </main>
     <footer>
         <div class="footer_container">
             <div class="container">
@@ -287,8 +223,9 @@
     <div class="copy-right">
         <p>All Right Reversed @2024. Designed by Toronto Cupcake.</p>
     </div>
-    <script src = "assets/js/main.js"></script>
-    <script src="assets/js/shopping.js"></script>
-    <script src = "assets/js/add.js"></script>
-</body>
+    <div id="toast__box"></div>
+      <script src = "assets/js/main.js"></script>
+      <script src = "assets/js/detail.js"></script>
+      <script src = "assets/js/add.js"></script>
+   </body>
 </html>

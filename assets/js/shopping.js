@@ -7,8 +7,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const subtotals = document.querySelectorAll(".subtotal");
     const totalElement = document.querySelector(".total");
     const productsSection = document.querySelector(".products");
+    const products = document.querySelectorAll(".product");
     const totalSection = document.querySelector(".sub");
     const section = document.getElementById('shopping-section');
+    const checkBoxes = document.querySelectorAll('input[type="checkbox"]')
+    const mids = document.querySelectorAll(".mid");
+
     let qty = buttons.length;
     let totalSum = 0;
 
@@ -24,6 +28,23 @@ document.addEventListener("DOMContentLoaded", function() {
             calculateTotal();
         });
     });
+    
+    mids.forEach((mid,index) => {
+        mid.addEventListener('click', function() {
+            handleCheckBox(this,index)
+        })
+    });
+    
+    function handleCheckBox(mid,index) {
+        if(products[index].querySelector('input[type="checkbox"]').checked){
+            products[index].querySelector('input[type="checkbox"]').checked = false
+        }else{
+            products[index].querySelector('input[type="checkbox"]').checked = true
+        }
+        calculateSubtotal(index)
+        calculateTotal()
+        
+    }
 
     buttons.forEach((button, index) => {
         let quantity = 1; 
@@ -45,6 +66,18 @@ document.addEventListener("DOMContentLoaded", function() {
                 quantities[index].textContent = quantity;
                 calculateSubtotal(index);
                 calculateTotal();
+            }
+            if(quantity==1){
+                qty--;
+                if (select[index].checked) {
+                    totalSum -= parseFloat(subtotals[index].textContent);
+                    totalElement.textContent = totalSum;
+                }
+                const productToDelete = select[index].closest('.product');
+                productToDelete.style.display = 'none'; 
+                select[index].checked = false; 
+                calculateTotal();
+                checkEmptyShoppingBag(); 
             }
         });
 
@@ -77,6 +110,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
         totalElement.textContent = totalSum;
+        checkSubmitOrder()
     }
 
     function checkEmptyShoppingBag() {
@@ -95,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <h2>Oops...</h2>
                 <h2>The cart is empty</h2>
                 <p>Go find the cupcake you like</p>
-                <a href="menu.html"><button>Back to Menu</button></a>
+                <a href="menu.html"><button class="but_empty">Back to Menu</button></a>
             </div>
         `;
         section.innerHTML = emptyBagHTML.trim();
@@ -110,6 +144,17 @@ document.addEventListener("DOMContentLoaded", function() {
             event.preventDefault();
         }
     });
+
+    var checkOutButton = document.getElementById('checkout')
+    checkOutButton.disabled = true;
+
+    function checkSubmitOrder() {
+        if (totalSum > 0) {
+            checkOutButton.disabled = false;
+        } else {
+            checkOutButton.disabled = true;
+        }
+    }
 
     calculateTotal();
 });
