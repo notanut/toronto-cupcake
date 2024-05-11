@@ -522,7 +522,7 @@
                                     <span class="title">Total</span>
                                     <span class="price">$16.50</span>
                                 </div>
-                                <button class="submit" id="submit-order" disabled>place order</button>
+                                <button class="submit" id="submit-order" onclick="checkout()" disabled>place order</button>
                             </div>
                         </div>
                     </div>
@@ -677,5 +677,19 @@
     </div>
     <script src="./assets/js/main.js"></script>
     <script src = "assets/js/add.js"></script>
+
+    <div class="payment-succeed" id="payment-succeed">
+        <script src="https://cdn.lordicon.com/lordicon.js"></script>
+        <lord-icon
+            src="https://cdn.lordicon.com/lomfljuq.json"
+            trigger="hover"
+            colors="primary:#f384a7"
+            style="width:150px;height:150px">
+        </lord-icon>
+        <h3>Your order is placed!</h3>
+        <p>Your cupcake is coming for you!</p>
+        <button id="back-home" onclick="backHome()">Back to Home</button>
+    </div>
+    <!-- <a href="https://lordicon.com/">Icons by Lordicon.com</a> -->
 </body>
 </html>
