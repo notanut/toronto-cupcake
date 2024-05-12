@@ -61,12 +61,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         minus.addEventListener("click", () => {
-            if (quantity > 1) {
-                quantity--;
-                quantities[index].textContent = quantity;
-                calculateSubtotal(index);
-                calculateTotal();
-            }
             if(quantity==1){
                 qty--;
                 if (select[index].checked) {
@@ -78,6 +72,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 select[index].checked = false; 
                 calculateTotal();
                 checkEmptyShoppingBag(); 
+            }
+            if (quantity > 1) {
+                quantity--;
+                quantities[index].textContent = quantity;
+                calculateSubtotal(index);
+                calculateTotal();
             }
         });
 
