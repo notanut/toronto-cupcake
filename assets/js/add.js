@@ -2,11 +2,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Get the add to cart buttons
     const addToCartButtons = document.querySelectorAll('.menu__button');
 
+    // Get the check out button
+    const checkOutButton = document.querySelector('.check_out_button');
+
+    // Get the quantity button
+    const quantityButton = document.querySelector('.quantity');
+
     // Get the quantity element
     const quantityElement = document.querySelector('.quantity');
-
-    // Get the reset button
-    const resetButton = document.querySelector('.quantity');
 
     // Get the toast box
     const toastBox = document.getElementById('toast__box');
@@ -34,20 +37,46 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    resetButton.addEventListener('click', function() {
-        //Reset quantity to 0
-        quantity = 0;
+    // Add event listener to the check out button
+    if (checkOutButton) {
+        checkOutButton.addEventListener('click', handleCheckOut);
+    }
 
-        //Update the quantity text
-        updateQuantityText();
-
-        //Remove the quantity from localStorage
-        localStorage.removeItem('cartQuantity');
-    })
+    // Add event listener to the quantity button
+    if (quantityButton) {
+        quantityButton.addEventListener('click', handleReset);
+    }
 
     // Function to update the quantity text
     function updateQuantityText() {
         quantityElement.textContent = quantity;
+    }
+
+    // Function to handle the check out button click
+    function handleCheckOut() {
+        // Increase the quantity by 1
+        quantity++;
+
+        // Update the quantity text
+        updateQuantityText();
+
+        // Store the updated quantity in localStorage
+        localStorage.setItem('cartQuantity', quantity.toString());
+
+        // Show the toast notification
+        showToast();
+    }
+
+    // Function to handle the quantity button click (reset)
+    function handleReset() {
+        // Reset quantity to 0
+        quantity = 0;
+
+        // Update the quantity text
+        updateQuantityText();
+
+        // Remove the quantity from localStorage
+        localStorage.removeItem('cartQuantity');
     }
 
     // Function to show the toast notification

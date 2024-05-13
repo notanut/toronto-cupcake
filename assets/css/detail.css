@@ -517,9 +517,23 @@ main {
   font-size: 15px;
 }
 
-.add_button:hover,
+.check_out_button a{
+  text-decoration: none;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px #d5d5d6;
+}
+
+.add_button:hover{
+  background-color: #ffffff00;
+  color: #f384a7;
+}
+
 .check_out_button:hover {
   background-color: #ffffff00;
+  color: #f384a7;
+}
+
+.check_out_button a:hover {
   color: #f384a7;
 }
 
